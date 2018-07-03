@@ -7,18 +7,24 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  // Use `app.import` to add additional libraries to the generated
-  // output files.
-  //
-  // If you need to use different assets in different
-  // environments, specify an object as the first parameter. That
-  // object's keys should be the environment name and the values
-  // should be the asset to use in that environment.
-  //
-  // If the library that you are including contains AMD or ES6
-  // modules that you would like to import into your application
-  // please specify an object with the list of modules as keys
-  // along with the exports of each module as its value.
+  var bower = 'bower_components';
+  app.import(bower + '/bootstrap/dist/css/bootstrap.css');
+  app.import(bower + '/bootstrap/dist/css/bootstrap.css.map', {
+    destDir : 'assets'
+  });
+  app.import(bower + '/font-awesome/web-fonts-with-css/css/fontawesome.css');
+  app.import(bower + '/bootstrap-select/dist/css/bootstrap-select.css');
+
+  var fa_font = bower + '/font-awesome/webfonts.';
+  var fa_font_exts = [ 'ttf', 'woff', 'woff2', 'svg' ];
+  fa_font_exts.forEach(function(ext) {
+    app.import(fa_font + ext, {
+      destDir : 'fonts'
+    });
+  });
+
+  app.import(bower + '/bootstrap/dist/js/bootstrap.js');
+  app.import(bower + '/bootstrap-select/dist/js/bootstrap-select.js');
 
   return app.toTree();
 };

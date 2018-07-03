@@ -7,10 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('index', function() {
-    this.route('account', function() {
-      this.route('login');
-    });
+  this.route('index', { path: '/' }, function() {
+    this.route('login');
   });
 });
 

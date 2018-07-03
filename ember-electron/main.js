@@ -29,10 +29,10 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-  });
+  mainWindow = new BrowserWindow({show: false });
+  mainWindow.maximize();
+  mainWindow.show();
+  mainWindow.setMenu(null);
 
   // If you want to open up dev tools programmatically, call
   // mainWindow.openDevTools();
