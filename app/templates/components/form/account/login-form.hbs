@@ -3,9 +3,9 @@
     <div id="output"></div>
     <div class="avatar"></div>
     <div class="form-box">
-      <form action="" method="">
-        <input name="user" type="text" placeholder="username">
-        <input type="password" placeholder="password">
+      <form id="login-form" {{action 'login' on='submit'}}>
+        {{input type="text" value=model.userName class="form-control"  placeholder="Tài khoản"}}
+        {{input type="password" value=model.password class="form-control"  placeholder="Mật khẩu"}}
         <button class="btn btn-info btn-block login" type="submit">Login</button>
       </form>
     </div>
