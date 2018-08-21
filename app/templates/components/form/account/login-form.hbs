@@ -4,9 +4,12 @@
     <div class="avatar"></div>
     <div class="form-box">
       <form id="login-form" {{action 'login' on='submit'}}>
-        {{input type="text" value=model.userName class="form-control"  placeholder="Tài khoản"}}
-        {{input type="password" value=model.password class="form-control"  placeholder="Mật khẩu"}}
-        <button class="btn btn-info btn-block login" type="submit">Login</button>
+        {{#if loginFailed}}
+          <div class="alert alert-danger">Thông tin đăng nhập không đúng</div>
+        {{/if}}
+        {{input type="text" name="userName" value=model.userName class="form-control"  placeholder="Tài khoản"}}
+        {{input type="password" name="password" value=model.password class="form-control"  placeholder="Mật khẩu"}}
+        <button class="btn btn-info btn-block login" type="submit" disabled={{isProcessing}}>Login</button>
       </form>
     </div>
   </div>

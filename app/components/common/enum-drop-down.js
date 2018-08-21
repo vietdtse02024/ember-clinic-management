@@ -1,18 +1,18 @@
-import DropDown from 'oversea/components/common/drop-down';
-import EnumDropDownHbs from 'oversea/templates/components/common/drop-down';
-
-
+import DropDown from 'ember-clinic-management/components/common/drop-down';
+import EnumDropDownHbs from 'ember-clinic-management/templates/components/common/drop-down';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 export default DropDown.extend({
-	
-  bootstrap : Ember.inject.service(),
+
+  bootstrap : service(),
   layout: EnumDropDownHbs,
   name: null,
   emptyOption: false,
   translate: true,
 
-  emptyLabel: 'label.common.empty',
+  emptyLabel: 'Tất cả',
 
-  content: function() {
+  content: computed(name, function() {
 
     let name = this.get('name');
     let bootstrap = this.get('bootstrap');
@@ -42,5 +42,5 @@ export default DropDown.extend({
     }
 
     return r;
-  }.property('name')
+  })
 });

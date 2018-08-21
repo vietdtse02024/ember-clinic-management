@@ -1,0 +1,228 @@
+<div class="main-body">
+  <h1 class="box-title">Phân quyền</h1>
+  <div class="main-content">
+    <div class="box-button">
+      <button class="btn btn-primary" {{action "search"}}><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
+      <button class="btn btn-success" {{action "addRole"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+    </div>
+    <form id="role-form">
+      {{#if successMsg}}
+        <div class="alert alert-success">{{successMsg}}</div>
+      {{/if}}
+      {{#if errorMsg}}
+        <div class="alert alert-danger">{{errorMsg}}</div>
+      {{/if}}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table id="mytable" class="table table-bordred table-striped">
+              <thead>
+                <th>ID</th>
+                <th>Quyền hạn</th>
+                <th>Mô tả</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+              </thead>
+              <tbody>
+                {{#each resultSearch as |roles|}}
+                  <tr>
+                    <td>{{roles.ID}}</td>
+                    <td>{{roles.RightName}}</td>
+                    <td>{{roles.Description}}</td>
+                    <td><button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editRole" roles.ID}}><span class="glyphicon glyphicon-pencil"></span></button></td>
+                    <td><button type="button" class="btn btn-danger btn-sm" data-title="Delete" {{action "deleteRole" roles.ID}}><span class="glyphicon glyphicon-trash"></span></button></td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="edit-role-form">
+        <div class="modal-header">
+
+          <h4 class="modal-title custom_align" id="Heading">Chỉnh sửa quyền cho nhân viên</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Chức danh</div>
+                <div class="col-md-8 content">
+                  {{input type="text" name="roleName" value=roleName class="form-control"}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Mô tả</div>
+                <div class="col-md-8 content">
+                  {{input type="text" name="description" value=description class="form-control"}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-role">
+            <div class="col-md-12">
+              <h4 class="title">Kho hàng</h4>
+              <hr>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk1" id="storeCk1"> <span class="label-text">Nhập kho</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk2" id="storeCk2"> <span class="label-text">Xuất kho</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk3" id="storeCk3"> <span class="label-text">Công nợ</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk4" id="storeCk4"> <span class="label-text">Quản lý thu chi</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk5" id="storeCk5"> <span class="label-text">Phiếu thu</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk6" id="storeCk6"> <span class="label-text">Phiếu chi</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="storeCk7" id="storeCk7"> <span class="label-text">Nguồn nhập</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-role">
+            <div class="col-md-12">
+              <h4 class="title">Bán hàng</h4>
+              <hr>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="saleCk1" id="saleCk1"> <span class="label-text">Bán hàng</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="saleCk2" id="saleCk2"> <span class="label-text">Chiết khấu</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="saleCk3" id="saleCk3"> <span class="label-text">Công nợ</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="saleCk4" id="saleCk4"> <span class="label-text">Báo cáo tổng hợp</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-role">
+            <div class="col-md-12">
+              <h4 class="title">Sản phẩm</h4>
+              <hr>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="productCk1" id="productCk1"> <span class="label-text">Sản phẩm</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="productCk2" id="productCk2"> <span class="label-text">In mã vạch</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="productCk3" id="productCk3"> <span class="label-text">Nhà cung cấp</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-role">
+            <div class="col-md-12">
+              <h4 class="title">Khách hàng</h4>
+              <hr>
+              <div class="form-check form-check-inline">
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="customerCk1" id="customerCk1"> <span class="label-text">Khách hàng</span>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label>
+                    <input type="checkbox" name="customerCk2" id="customerCk2"> <span class="label-text">Bác sĩ</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditRole"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="delete-role-form">
+        <div class="modal-header">
+          <h4 class="modal-title custom_align" id="Heading">Xóa quyền nhân viên</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Bạn có chắc chắn muốn xóa?</div>
+
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success" {{action "confirmDeleteRole"}}><span class="glyphicon glyphicon-ok-sign"></span> Đồng ý</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Hủy bỏ</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>

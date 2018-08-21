@@ -1,34 +1,48 @@
 import Component from '@ember/component';
-
+import { inject as service } from '@ember/service';
+import $ from 'jquery';
 export default Component.extend({
+  ajax: service(),
+  bootstrap: service(),
+  router: service(),
+  loginFailed: false,
+  isProcessing: false,
   init() {
     this._super(...arguments);
     let model = this.get('model');
   },
-  getFormData() {
-    let form = new FormData();
-    form.append('userName', this.get('userName'));
-    form.append('password', this.get('password'));
-    return form;
+  success(userData) {
+    let bootstrap = this.get('bootstrap');
+    bootstrap.boot("isAuthen", true);
+    bootstrap.pushUserModel(userData);
+    this.get('router').transitionTo('index.welcome');
+  },
+  failure() {
+    let bootstrap = this.get('bootstrap');
+    bootstrap.boot("isAuthen", false);
+    this.set("loginFailed", true);
   },
   actions:{
     login(){
-      console.log(this.get('model').userName);
-      $.ajax({
-        type: "POST",
-        enctype: 'multipart/form-data',
-        url: "http://localhost/API/search.php",
-        data: self.getFormData(),
-        processData: false,
-        contentType: false,
-        cache: false,
-        timeout: 600000,
-        success: function (r) {
-          console.log(r);
-        },
-        error: function (e) {
-        }
+      this.setProperties({
+        loginFailed: false,
+        isProcessing: true
       });
+      let self = this;
+      let ajax = this.get('ajax');
+      ajax.postFormData('login.php', $("#login-form").serialize()).then((r) => {
+        self.set("isProcessing", false);
+        if (r && r.result == "SUCCESS") {
+          self.success(r.data[0]);
+        } else {
+          self.failure();
+        }
+      }, function () {
+        self.set("isProcessing", false);
+        self.failure();
+      });
+
     }
+
   }
 });

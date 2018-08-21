@@ -1,0 +1,191 @@
+<div class="main-body">
+  <h1 class="box-title">Bác sỹ</h1>
+  <div class="main-content">
+  	{{#if successMsg}}
+    	<div class="alert alert-success">{{successMsg}}</div>
+  	{{/if}}
+  	{{#if errorMsg}}
+    	<div class="alert alert-danger">{{errorMsg}}</div>
+  	{{/if}}
+  	<div class="row col-md-12">
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4 title">Tên bác sỹ</div>
+              <div class="col-md-8 content">
+                {{common/selectpicker-field fieldName="doctorIdSearch" type='select' tableName='doctor' columnKey='ID' columnValue='DoctorName'
+                     data-style='btn-common' data-live-search='true' changeset=changeset emptyOption='true'}}
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="box-button">
+      <button class="btn btn-primary" {{action "search"}}><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
+      <button class="btn btn-success" {{action "addDoctor"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+    </div>
+    <form id="doctor-form">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table id="mytable" class="table table-bordred table-striped">
+              <thead>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Điện thoại</th>
+                <th>Email</th>
+                <th>Quận/Huyện</th>
+                <th>Tỉnh/Thành Phố</th>
+                <th>Địa chỉ</th>
+                <th>Ghi chú</th>
+                <th>Sửa</th>
+                <th>Xóa</th>
+                <th></th>
+              </thead>
+              <tbody>
+              {{#each resultSearch as | item index|}}
+                <tr>
+                  <td>{{inc index}}</td>
+                  <td>{{item.DoctorName}}</td>
+                  <td>{{item.DoctorPhoneNo}}</td>
+                  <td>{{item.DoctorEmail}}</td>
+                  <td>{{item.DistrictName}}</td>
+                  <td>{{item.ProvinceName}}</td>
+                  <td>{{item.DoctorAddress}}</td>
+                  <td>{{item.DoctorDescription}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editDoctor" item.ID}}><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger btn-sm" data-title="Delete" {{action "deleteDoctor" item.ID}}><span class="glyphicon glyphicon-trash"></span></button>
+                  </td>
+                </tr>
+              {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="edit-staff-form">
+        <div class="modal-header">
+
+          <h4 class="modal-title custom_align" id="Heading">Cập nhật thông tin bác sỹ</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Tên</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="doctorName" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Số điện thoại</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="phoneNo" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Email</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="email" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Tỉnh/Thành phố</div>
+                <div class="col-md-8 content">
+                  {{common/selectpicker-field fieldName="province" fieldValue=province type='select' tableName='province' columnKey='ID' columnValue='ProvinceName'
+                     data-style='btn-common' data-live-search='true' changeset=changeset}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Quận Huyện</div>
+                <div class="col-md-8 content">
+                  {{common/selectpicker-field fieldName="district" fieldValue=district type='select' tableName='district' columnKey='ID' columnValue='DistrictName'
+                     data-style='btn-common' data-live-search='true' changeset=changeset}}
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Địa chỉ</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="address" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Ghi chú</div>
+                <div class="col-md-8 content">
+                  {{textarea value=note class='form-control'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditDoctor"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="delete-staff-form">
+        <div class="modal-header">
+          <h4 class="modal-title custom_align" id="Heading">Xóa quyền nhân viên</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Bạn có chắc chắn muốn xóa?</div>
+
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success" {{action "confirmDeleteDoctor"}}><span class="glyphicon glyphicon-ok-sign"></span> Đồng ý</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Hủy bỏ</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>

@@ -1,0 +1,10 @@
+{{#if (eq type 'enum')}}
+  {{common/enum-drop-down fieldName=fieldName name=name data-style=data-style data-live-search=data-live-search emptyOption=emptyOption}}
+{{else if (eq type 'select')}}
+  {{common/select-dropdown-field fieldName=fieldName tableName=tableName columnKey=columnKey columnValue=columnValue changeset=changeset
+                                 value=fieldValue data-style=data-style data-live-search=data-live-search emptyOption=emptyOption}}
+{{else}}
+  {{common/drop-down fieldName=fieldName content=content data-style=data-style data-live-search=data-live-search}}
+{{/if}}
+
+{{common/message-alert changeset=changeset fieldName=fieldName}}

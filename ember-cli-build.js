@@ -12,13 +12,23 @@ module.exports = function(defaults) {
   app.import(bower + '/bootstrap/dist/css/bootstrap.css.map', {
     destDir : 'assets'
   });
-  app.import(bower + '/font-awesome/web-fonts-with-css/css/fontawesome.css');
+  app.import(bower + '/simple-line-icons/css/simple-line-icons.css');
   app.import(bower + '/bootstrap-select/dist/css/bootstrap-select.css');
 
-  var fa_font = bower + '/font-awesome/webfonts.';
-  var fa_font_exts = [ 'ttf', 'woff', 'woff2', 'svg' ];
-  fa_font_exts.forEach(function(ext) {
-    app.import(fa_font + ext, {
+  var icon_font = bower + '/simple-line-icons/fonts/Simple-Line-Icons.';
+  var icon_font_exts = [ 'ttf', 'woff', 'woff2', 'svg' ];
+  icon_font_exts.forEach(function(ext) {
+    app.import(icon_font + ext, {
+      destDir : 'fonts'
+    });
+  });
+
+  app.import(bower + '/glyphicons/styles/glyphicons.css');
+
+  var glyphicon_font = bower + '/glyphicons/fonts/glyphicons-halflings-regular.';
+  var glyphicon_font_exts = [ 'ttf', 'woff', 'woff2', 'svg' ];
+  glyphicon_font_exts.forEach(function(ext) {
+    app.import(glyphicon_font + ext, {
       destDir : 'fonts'
     });
   });

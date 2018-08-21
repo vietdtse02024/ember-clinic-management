@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-clinic-management',
     environment,
     rootURL: '/',
+    apiURL: 'http://localhost/API/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

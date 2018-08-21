@@ -1,0 +1,40 @@
+<div class="header" id="header">
+  <div class="logowrap">
+    <a class="logo"></a>
+  </div>
+  <div class="groupheader">
+    <div class="header-item">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bán Hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kho Hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sản Phẩm</a>
+        </li>
+        <li class="nav-item">
+          {{#link-to "index.customer.index.customer" class="button nav-link" id="tab-customer"}}
+            Khách Hàng
+          {{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to "index.setting.index.option" class="button nav-link" id="tab-option"}}
+            Tùy Chọn
+          {{/link-to}}
+        </li>
+      </ul>
+    </div>
+    <div class="usertools username">
+      <ul>
+        <li>
+          <a href="#" {{action "logout"}}>
+            <span class="value">Đăng Xuất</span>
+            <i class="icon-logout icons"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

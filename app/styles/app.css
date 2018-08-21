@@ -4,6 +4,16 @@ html,body{
   height: 100%;
 }
 
+body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body a {
+  text-decoration: none !important;
+}
+
 .login-container{
   position: relative;
   width: 300px;
@@ -132,4 +142,337 @@ html,body{
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  border:1px solid #e0e0e0;
+}
+
+#header .logo {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 60px;
+  background: url(../images/logo.png) no-repeat center left transparent;
+  background-size: auto 90%;
+}
+
+#header .logowrap {
+  border-right: 1px solid #ededed;
+  position: relative;
+  height: 60px;
+  width: 280px;
+  float: left;
+  margin-left: 10px;
+}
+
+#header .logowrap:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #ededed;
+  right: -10px;
+  top: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+#header .logowrap:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 9px solid #ffffff;
+  right: -9px;
+  top: 21px;
+  position: absolute;
+  z-index: 2;
+}
+
+.header {
+  display: inline-block;
+}
+
+#header ul {
+  margin-top: 10px;
+}
+#header ul li{
+  display: inline-block;
+}
+#header ul li a{
+  color: black;
+}
+.header-item a:hover {
+  color: #393bed !important;
+}
+
+#header .header-item {
+  display: inline-block;
+}
+
+#header .header-item ul {
+  font-weight: 500;
+}
+
+#header .header-item ul li .active{
+  border-bottom: 2px solid red;
+  color : #4096f6;
+}
+
+#header .usertools {
+  margin-right: 10px;
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+}
+
+
+#header .usertools ul > li {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  height: 28px;
+  line-height: 18px;
+  margin-right: 40px;
+}
+
+#header .usertools ul > li a {
+  display: block;
+  height: 40px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.main-body{
+  background-color: white;
+  margin-top: 70px;
+  display: inline-block;
+  width: calc(100% - 310px);
+  margin-right: 10px;
+  min-height: calc(100vh - 80px);
+  float: right;
+  margin-bottom: 10px;
+}
+.main-body .box-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ededed;
+  color: #000000;
+  border-left: 3px solid #063796;
+  text-transform: uppercase;
+}
+
+.main-content {
+  padding-top: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.row .form-group {
+  margin-bottom: 10px!important;
+  padding-bottom: 10px!important;
+  border-bottom: 1px dotted #ededed;
+}
+.row {
+  margin-left: 0px !important;
+}
+.btn-primary {
+  color: #fff !important;
+  min-width: 100px;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 10px
+}
+
+.left-menu {
+  background-color: white;
+  margin-top: 125px;
+  width: 280px;
+  margin-left: 10px;
+  height: calc(100vh - 135px);
+  float: left;
+  position: fixed;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+.user-profile {
+  background-color: #c60606;
+  margin-top: 70px;
+  display: inline-block;
+  width: 280px;
+  margin-left: 10px;
+  min-height: 50px;
+  float: left;
+  word-break: break-all;
+  position: fixed;
+}
+
+.user-profile .content {
+  margin-left: 10px;
+  margin-top: 12px;
+  color: #ffffff;
+}
+
+.main-menu {
+  margin: 0px 10px 0px 10px;
+}
+.main-menu ul > li{
+  border-bottom: 1px solid #ededed;
+}
+
+.main-menu ul > li a{
+  display: block;
+  height: 50px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.main-menu ul li .active{
+  color: #ff0000;
+  border-bottom: 1px solid;
+}
+
+.table-responsive td .btn-primary{
+  min-width : 1px !important;
+}
+
+.box-role {
+  border : 1px solid #d3d3d3;
+  margin-top: 5px;
+}
+.box-button {
+  margin: 10px;
+  padding: 5px;
+  display: inline-block;
+}
+
+
+#loading-page {
+  height: 100%;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display : none;
+}
+.bokeh {
+  border: 0.01em solid rgba(150, 150, 150, 0.1);
+  border-radius: 50%;
+  font-size: 60px;
+  height: 1em;
+  list-style: outside none none;
+  margin: 0 auto;
+  position: relative;
+  top: 35%;
+  width: 1em;
+  z-index: 2147483647;
+}
+.bokeh li {
+  border-radius: 50%;
+  height: 0.2em;
+  position: absolute;
+  width: 0.2em;
+}
+.bokeh li:nth-child(1) {
+  animation: 1.13s linear 0s normal none infinite running rota, 3.67s ease-in-out 0s alternate none infinite running opa;
+  background: #00c176 none repeat scroll 0 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  top: 0;
+  transform-origin: 50% 250% 0;
+}
+.bokeh li:nth-child(2) {
+  animation: 1.86s linear 0s normal none infinite running rota, 4.29s ease-in-out 0s alternate none infinite running opa;
+  background: #ff003c none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  right: 0;
+  top: 50%;
+  transform-origin: -150% 50% 0;
+}
+.bokeh li:nth-child(3) {
+  animation: 1.45s linear 0s normal none infinite running rota, 5.12s ease-in-out 0s alternate none infinite running opa;
+  background: #fabe28 none repeat scroll 0 0;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  transform-origin: 50% -150% 0;
+}
+.bokeh li:nth-child(4) {
+  animation: 1.72s linear 0s normal none infinite running rota, 5.25s ease-in-out 0s alternate none infinite running opa;
+  background: #88c100 none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  top: 50%;
+  transform-origin: 250% 50% 0;
+}
+@keyframes opa {
+  12% {
+    opacity: 0.8;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.6;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.6;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91% {
+    opacity: 0.87;
+  }
+}
+
+@keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.dropdown-menu li a {
+  font-size: 14px;
+}
+
+.alertcustom {
+  margin-top: 10px;
+  color: #e6002d;
+  font-size: 14px;
 }

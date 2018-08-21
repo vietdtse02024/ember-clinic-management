@@ -1,0 +1,8 @@
+{{#if (get changeset.error fieldName )}}
+  <div class="alertcustom">
+    <i class="glyphicon glyphicon-alert"></i>
+    {{#with (get (get changeset.error fieldName) 'validation') as |error| }}
+      {{error.[0]}}
+    {{/with}}
+  </div>
+{{/if}}

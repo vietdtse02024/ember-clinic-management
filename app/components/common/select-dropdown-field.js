@@ -1,44 +1,53 @@
-import DropDown from 'oversea/components/common/drop-down';
-import EnumDropDownHbs from 'oversea/templates/components/common/drop-down';
-
+import DropDown from 'ember-clinic-management/components/common/drop-down';
+import EnumDropDownHbs from 'ember-clinic-management/templates/components/common/drop-down';
+import { inject as service } from '@ember/service';
+import { Promise } from 'rsvp';
 
 export default DropDown.extend({
-	
-  bootstrap : Ember.inject.service(),
-  layout: EnumDropDownHbs,
-  name: null,
 
+  bootstrap : service(),
+  ajax : service(),
+  layout: EnumDropDownHbs,
   emptyOption: false,
 
-  emptyLabel: 'label.common.empty',
+  emptyLabel: 'Tất cả',
+  init(){
+    this._super();
+    let self = this;
+    this.getContent().then(function(r){
+      self.set('content', r);
+    });
+  },
+  getContent: function() {
+    let ajax = this.get('ajax');
+    let self = this;
 
-  content: function() {
-
-    let name = this.get('name');
-    let bootstrap = this.get('bootstrap');
-    let content = bootstrap.get(name);
-
-    let r = [];
-    let emptyOption = this.get('emptyOption');
+    let result = [];
+    let emptyOption = self.get('emptyOption');
 
     if (emptyOption) {
-      let emptyLabel = this.get('emptyLabel');
+      let emptyLabel = self.get('emptyLabel');
 
-      r.push({
+      result.push({
         name: emptyLabel,
-        value: 0
+        value: -1
       });
     }
-
-    if (content) {
-    	content.forEach(e => {
-	      r.push({
-	        name: e.name,
-	        value: e.value
-	      });
-	    });
-    }
-
-    return r;
-  }.property('name')
+    return new Promise(function(resolve, reject){
+      ajax.get('init-combobox.php?tableName='+ self.get('tableName') + '&columnKey='+ self.get('columnKey') + '&columnValue='+ self.get('columnValue')).then((r) => {
+        if (r.type === 'DATA' && r.data) {
+          let content = r.data;
+          if (content) {
+            content.forEach(e => {
+              result.push({
+                name: e.name,
+                value: e.value
+              });
+            });
+          }
+          resolve(result);
+        }
+      });
+    });
+  }
 });

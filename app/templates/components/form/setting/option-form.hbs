@@ -1,0 +1,60 @@
+<div class="main-body">
+  <h1 class="box-title">Cài đặt</h1>
+  <div class="main-content">
+    <form id="option-form"  {{action 'saveOption' on='submit'}}>
+      {{#if successMsg}}
+        <div class="alert alert-success">{{successMsg}}</div>
+      {{/if}}
+      {{#if errorMsg}}
+        <div class="alert alert-danger">{{errorMsg}}</div>
+      {{/if}}
+      <div class="row col-md-12">
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4 title">Tên cửa hàng</div>
+              <div class="col-md-8 content">
+                {{input type="text" name="storeName" value=storeName class="form-control"}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4 title">Địa chỉ</div>
+              <div class="col-md-8 content">
+                {{input type="text" name="storeAddress" value=storeAddress class="form-control"}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4 title">Điện thoại</div>
+              <div class="col-md-8 content">
+                {{input type="text" name="phoneNo" value=phoneNo class="form-control"}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row col-md-12">
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4 title">Hoa hồng cho môi giới</div>
+              <div class="col-md-8 content">
+                {{input type="text" name="commission" value=commission class="form-control"}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="form-group form-footer">
+          <button id="btnSave" type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+    </form>
+  </div>
+</div>
