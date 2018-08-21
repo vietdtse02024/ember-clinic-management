@@ -1,0 +1,9 @@
+{{#each content key="@index" as |option|}}
+    <option value="{{option.value}}">
+      {{#if translate}}
+        {{t option.name}}
+      {{else}}
+        {{option.name}}
+      {{/if}}
+    </option>
+{{/each}}
