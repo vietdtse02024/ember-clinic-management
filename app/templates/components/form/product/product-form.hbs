@@ -1,0 +1,167 @@
+<div class="main-body">
+  <h1 class="box-title">Thông tin sản phẩm</h1>
+  <div class="main-content">
+    {{#if successMsg}}
+      <div class="alert alert-success">{{successMsg}}</div>
+    {{/if}}
+    {{#if errorMsg}}
+      <div class="alert alert-danger">{{errorMsg}}</div>
+    {{/if}}
+    <div class="row col-md-12">
+      <div class="col-md-4">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4 title">Tên sản phẩm</div>
+            <div class="col-md-8 content">
+              {{common/selectpicker-field fieldName="productIdSearch" type='select' tableName='Product' columnKey='ID' columnValue='ProductName'
+                                          data-style='btn-common' data-live-search='true' changeset=changeset emptyOption='true'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-button">
+      <button class="btn btn-primary" {{action "search"}}><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
+      <button class="btn btn-success" {{action "addCustomer"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+    </div>
+    <form id="customer-form">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table id="mytable" class="table table-bordred table-striped">
+              <thead>
+              <th>STT</th>
+              <th>Tên SP</th>
+              <th>Nhóm SP</th>
+              <th>Nước SX</th>
+              <th>Hãng SX</th>
+              <th>Nhà cung cấp</th>
+              <th>Giá nhập</th>
+              <th>Thông tin</th>
+              <th>Sửa</th>
+              <th>Xóa</th>
+              </thead>
+              <tbody>
+              {{#each resultSearch as | item index|}}
+                <tr>
+                  <td>{{inc index}}</td>
+                  <td>{{item.ProductName}}</td>
+                  <td>{{item.Serial}}</td>
+                  <td>{{item.ProductGroup}}</td>
+                  <td>{{item.CountryName}}</td>
+                  <td>{{item.Producter}}</td>
+                  <td>{{format-number item.ImportPrice format="###,###"}}</td>
+                  <td>{{item.Descriptions}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editCustomer" item.ID}}><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger btn-sm" data-title="Delete" {{action "deleteProduct" item.ID}}><span class="glyphicon glyphicon-trash"></span></button>
+                  </td>
+                </tr>
+              {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="edit-staff-form">
+        <div class="modal-header">
+
+          <h4 class="modal-title custom_align" id="Heading">Cập nhật thông tin khách hàng</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Tên</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="customerName" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Số điện thoại</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="phoneNo" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Email</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="email" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Tỉnh/Thành phố</div>
+                <div class="col-md-8 content">
+                  {{common/selectpicker-field fieldName="province" fieldValue=province type='select' tableName='province' columnKey='ID' columnValue='ProvinceName'
+                                              data-style='btn-common' data-live-search='true' changeset=changeset}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Quận Huyện</div>
+                <div class="col-md-8 content">
+                  {{common/selectpicker-field fieldName="district" fieldValue=district type='select' tableName='district' columnKey='ID' columnValue='DistrictName'
+                                              data-style='btn-common' data-live-search='true' changeset=changeset}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Địa chỉ</div>
+                <div class="col-md-8 content">
+                  {{common/text-field fieldName="address" changeset=changeset type='text'}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4 title">Ghi chú</div>
+                <div class="col-md-8 content">
+                  {{textarea value=note class='form-control'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditCustomer"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+{{common/modal-delete-form title="Xóa sản phẩm" apiUrl="delete-product" paramValue=productId pramName="productId" parent=this callback="searchProduct"}}

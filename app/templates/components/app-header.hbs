@@ -12,7 +12,9 @@
           <a class="nav-link" href="#">Kho Hàng</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sản Phẩm</a>
+          {{#link-to "index.product.index.product" class="button nav-link" id="tab-product"}}
+            Sản phẩm
+          {{/link-to}}
         </li>
         <li class="nav-item">
           {{#link-to "index.customer.index.customer" class="button nav-link" id="tab-customer"}}

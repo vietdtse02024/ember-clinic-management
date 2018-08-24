@@ -18,7 +18,7 @@ export default Route.extend({
     this._super(...arguments);
     let bootstrap = this.get('bootstrap');
     if (!bootstrap.isAuthen) {
-      this.replaceWith('authen.login');
+      //this.replaceWith('authen.login');
     }
 
   },

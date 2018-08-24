@@ -24,6 +24,11 @@ Router.map(function() {
         this.route('doctor');
       });
     });
+    this.route('product', function() {
+      this.route('index', { path: '/' }, function() {
+        this.route('product');
+      });
+    });
   });
 
   this.route('authen', function() {

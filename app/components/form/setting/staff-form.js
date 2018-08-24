@@ -16,18 +16,19 @@ export default Component.extend({
     this._super(...arguments);
     $("#tab-option").addClass('active');
     this.changeset = new Changeset(this, lookupValidator(StaffValidations), StaffValidations, { skipValidate : true });
-    this.searchStaff();
+    this.send("searchStaff");
   },
-  searchStaff() {
-    let ajax = this.get('ajax');
-    let self = this;
-    ajax.get('search-staff.php').then((r) => {
-      if (r.type === 'DATA' && r.data) {
-        self.set('resultSearch', r.data);
-      }
-    });
-  },
+
   actions:{
+    searchStaff() {
+      let ajax = this.get('ajax');
+      let self = this;
+      ajax.get('search-staff.php').then((r) => {
+        if (r.type === 'DATA' && r.data) {
+          self.set('resultSearch', r.data);
+        }
+      });
+    },
     editStaff(staffId){
       let self = this;
       let ajax = this.get('ajax');
@@ -84,8 +85,8 @@ export default Component.extend({
               self.set('errorMsg', r.message);
               self.set('successMsg', null);
             }
-            self.searchStaff();
-            
+            self.send("searchStaff");
+
           }, function () {
             self.set('errorMsg', "Có lỗi xảy ra.");
             self.set('successMsg', null);
@@ -103,27 +104,12 @@ export default Component.extend({
         refresh: true
       });
     },
-    confirmDeleteStaff(){
-      let self = this;
-      let ajax = this.get('ajax');
-      ajax.get('delete-staff.php?staffId='+self.get('staffId')).then((r) => {
-        if (r && r.result === 'SUCCESS') {
-          self.set('errorMsg', null);
-          self.set('successMsg', "Xóa thành công");
-          self.searchStaff();
-        } else {
-          self.set('errorMsg', "Xóa thất bại");
-          self.set('successMsg', null);
-        }
-        $('#delete').modal('toggle');
-      });
-    },
     search(){
       this.setProperties({
         successMsg : null,
         errorMsg : null
       });
-      this.searchStaff();
+      this.send("searchStaff");
     },
     addStaff(){
       this.get('changeset').setProperties({
@@ -144,7 +130,7 @@ export default Component.extend({
       });
     },
     changePassword(staffId){
-      
+
       this.get('changeset').setProperties({
         password : null,
         confirmPassword : null
@@ -180,7 +166,7 @@ export default Component.extend({
         self.set('successMsg', null);
       });
       $('#change-pass').modal('toggle');
-      
+
     },
 
   }

@@ -1,6 +1,5 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { scheduleOnce } from '@ember/runloop';
 import $ from 'jquery';
 import Changeset from 'ember-changeset';
 export default Component.extend({
@@ -12,19 +11,20 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     this.changeset = new Changeset(this);
-    this.searchCustomer();
-    
+    this.send("searchCustomer");
+
   },
-  searchCustomer() {
-    let ajax = this.get('ajax');
-    let self = this;
-    ajax.get('search-customer.php?customerId=' + this.get('changeset').get('customerIdSearch')).then((r) => {
-      if (r.type === 'DATA' && r.data) {
-        self.set('resultSearch', r.data);
-      }
-    });
-  },
+
   actions:{
+    searchCustomer() {
+      let ajax = this.get('ajax');
+      let self = this;
+      ajax.get('search-customer.php?customerId=' + this.get('changeset').get('customerIdSearch')).then((r) => {
+        if (r.type === 'DATA' && r.data) {
+          self.set('resultSearch', r.data);
+        }
+      });
+    },
     editCustomer(customerId){
       let self = this;
       let ajax = this.get('ajax');
@@ -33,7 +33,7 @@ export default Component.extend({
           let data = r.data[0];
           self.setProperties({
             customerId : customerId,
-            note : data.CustomerDescription, 
+            note : data.CustomerDescription,
             province : data.CustomerProvinceID,
             district : data.CustomerDistrictID
           });
@@ -68,7 +68,7 @@ export default Component.extend({
         "note" : self.get('note'),
         "customerId": self.get('customerId')
       };
-      
+
       ajax.postJsonData('save-customer.php', jsonData).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Cập nhật thông tin thành công");
@@ -78,8 +78,8 @@ export default Component.extend({
           self.set('errorMsg', r.message);
           self.set('successMsg', null);
         }
-        self.searchCustomer();
-        
+        self.send("searchCustomer");
+
       }, function () {
         self.set('errorMsg', "Có lỗi xảy ra.");
         self.set('successMsg', null);
@@ -92,32 +92,17 @@ export default Component.extend({
         refresh: true
       });
     },
-    confirmDeleteCustomer(){
-      let self = this;
-      let ajax = this.get('ajax');
-      ajax.get('delete-customer.php?customerId='+self.get('customerId')).then((r) => {
-        if (r && r.result === 'SUCCESS') {
-          self.set('errorMsg', null);
-          self.set('successMsg', "Xóa thành công");
-          self.searchCustomer();
-        } else {
-          self.set('errorMsg', "Xóa thất bại");
-          self.set('successMsg', null);
-        }
-        $('#delete').modal('toggle');
-      });
-    },
     search(){
       this.setProperties({
         successMsg : null,
         errorMsg : null
       });
-      this.searchCustomer();
+      this.send("searchCustomer");
     },
     addCustomer(){
       this.setProperties({
         customerId : null,
-        note : null, 
+        note : null,
         province : null,
         district : null
       });

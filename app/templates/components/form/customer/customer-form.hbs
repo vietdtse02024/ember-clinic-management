@@ -25,7 +25,7 @@
       <button class="btn btn-success" {{action "addCustomer"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
     </div>
     <form id="customer-form">
-      
+
       <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">
@@ -41,7 +41,6 @@
                 <th>Ghi chú</th>
                 <th>Sửa</th>
                 <th>Xóa</th>
-                <th></th>
               </thead>
               <tbody>
               {{#each resultSearch as | item index|}}
@@ -165,27 +164,4 @@
   <!-- /.modal-dialog -->
 </div>
 
-<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form id="delete-staff-form">
-        <div class="modal-header">
-          <h4 class="modal-title custom_align" id="Heading">Xóa quyền nhân viên</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        </div>
-        <div class="modal-body">
-
-          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Bạn có chắc chắn muốn xóa?</div>
-
-        </div>
-        <div class="modal-footer ">
-          <button type="button" class="btn btn-success" {{action "confirmDeleteCustomer"}}><span class="glyphicon glyphicon-ok-sign"></span> Đồng ý</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Hủy bỏ</button>
-        </div>
-      </form>
-    </div>
-
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
+{{common/modal-delete-form title="Xóa khách hàng" apiUrl="delete-customer.php" paramValue=customerId pramName="customerId" parent=this callback="searchCustomer"}}
