@@ -476,3 +476,27 @@ body a {
   color: #e6002d;
   font-size: 14px;
 }
+
+.modal-lager {
+  max-width : 50%;
+}
+
+.modal-lager .table-responsive {
+  height : 350px;
+}
+.required {
+  color : red;
+}
+
+.tabled-small th,
+.tabled-small td{
+  padding: 8px 10px;
+}
+
+.tabled-small{
+  border: 1px solid #dee2e6;
+}
+
+.padding-right {
+  padding-right: 25px;
+}

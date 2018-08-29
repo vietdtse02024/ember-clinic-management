@@ -1,7 +1,7 @@
 import { computed } from '@ember/object'
 import AjaxService from 'ember-ajax/services/ajax';
-import config from '../config/environment';
-import { getCookie } from '../utils/cookie';
+import config from 'ember-clinic-management/config/environment';
+import { getCookie } from 'ember-clinic-management/utils/cookie';
 import $ from 'jquery';
 import { Promise } from 'rsvp';
 export default AjaxService.extend({
