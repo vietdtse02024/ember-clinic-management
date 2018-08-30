@@ -5,6 +5,7 @@ import Changeset from 'ember-changeset';
 import $ from 'jquery';
 import { FunctionNames } from 'ember-clinic-management/utils/enums';
 
+
 export default BaseCompenent.extend({
   resultSearch : null,
   sellType : null,
@@ -12,6 +13,7 @@ export default BaseCompenent.extend({
   successMsg : null,
   errorMsg : null,
   productId : null,
+  test : 5230/100,
   init() {
     this._super(...arguments);
     this.changeset = new Changeset(this, lookupValidator(ProductValidations), ProductValidations, { skipValidate : true });
@@ -54,6 +56,7 @@ export default BaseCompenent.extend({
           country : item.CountryID,
           producter : item.ProducterID,
           supplier : item.SupplierID,
+          importPrice : item.ImportPrice
         });
         this.setProperties({
           productGroup : item.GroupID,
@@ -73,6 +76,7 @@ export default BaseCompenent.extend({
           country : null,
           producter : null,
           supplier : null,
+          importPrice : null
         });
         this.setProperties({
           productGroup : null,
@@ -132,6 +136,10 @@ export default BaseCompenent.extend({
         errorMsg: null
       });
       this.send("searchProduct");
+    },
+    calculateRate : function(index) {
+      let rate = $("#rate" + index);
+      let sellPrice = $("#price" + index);
     }
   }
 });

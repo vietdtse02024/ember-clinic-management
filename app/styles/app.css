@@ -482,7 +482,7 @@ body a {
 }
 
 .modal-lager .table-responsive {
-  height : 350px;
+  height : 310px;
 }
 .required {
   color : red;
@@ -495,8 +495,29 @@ body a {
 
 .tabled-small{
   border: 1px solid #dee2e6;
+  font-size: 14px;
 }
 
 .padding-right {
   padding-right: 25px;
+}
+
+.pagination-centered {
+  float : right;
+  padding: 5px;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination .active {
+  color: #fff!important;
+  background-color: #f44336!important;
+}
+
+.table-responsive {
+  border: 1px solid #beb7b7;
 }
