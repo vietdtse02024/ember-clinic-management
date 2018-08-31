@@ -35,7 +35,9 @@ export default Component.extend({
     formatRate : function(e) {
       e.value = numeral(e.value).format('#,#.0');
     },
+  },
+  convertStringToNumber : function(s){
+    return Number(s.replace(/[^\d.]/g, ''))
   }
-
 
 });

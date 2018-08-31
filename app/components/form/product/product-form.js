@@ -138,8 +138,27 @@ export default BaseCompenent.extend({
       this.send("searchProduct");
     },
     calculateRate : function(index) {
+      let changeset = this.get('changeset');
       let rate = $("#rate" + index);
       let sellPrice = $("#price" + index);
+      let importPrice = Number(changeset.get('importPrice'));
+      let result = (this.convertStringToNumber(sellPrice.val()) - importPrice)/importPrice * 100;
+      rate.val(result).blur();
+    },
+    calculateSellPrice : function() {
+      let changeset = this.get('changeset');
+      let importPrice = Number(changeset.get('importPrice'));
+      let sellTypeData = this.get('sellType');
+      let index = 0;
+      sellTypeDate.forEach(function(r) {
+        index++;
+      });
+      let rate = $("#rate" + index);
+      let sellPrice = $("#price" + index);
+
+      let result =  importPrice + (importPrice * this.convertStringToNumber(rate.val())/100);
+      result = Number((result/1000).toFixed(0))*1000;
+      sellPrice.val(result).blur();
     }
   }
 });
