@@ -7,10 +7,6 @@ import validateValidateTextfieldRequire from 'ember-clinic-management/validators
 export default {
   productName: [
     validateValidateTextfieldRequire({ presence: true,  ignoreBlank : true})
-  ],
-  importPrice: [
-    validateValidateTextfieldRequire({ presence: true,  ignoreBlank : true}),
-    validateNumber({gt : 0}),
   ]
 
 }

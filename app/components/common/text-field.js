@@ -1,8 +1,10 @@
 import Component from '@ember/component';
+import BaseCompenent from 'ember-clinic-management/components/common/base-component';
 
-export default Component.extend({
+export default BaseCompenent.extend({
   maxlength: null,
   fieldName: null,
+  changeset: null,
   init(){
     this._super(...arguments);
   },

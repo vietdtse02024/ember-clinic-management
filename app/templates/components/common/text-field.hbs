@@ -1,4 +1,4 @@
-{{input value=(get changeset fieldName)  class=(concat "form-control element-control " ) id=id
+{{input value=(get changeset fieldName)  class=(concat "form-control element-control " )
         maxlength=maxlength focus-out=(action "validate") type=type disabled=disabled}}
 {{common/message-alert changeset=changeset fieldName=fieldName}}
 

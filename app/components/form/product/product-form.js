@@ -13,6 +13,7 @@ export default BaseCompenent.extend({
   successMsg : null,
   errorMsg : null,
   productId : null,
+  importPrice : null,
   test : 5230/100,
   init() {
     this._super(...arguments);
@@ -55,8 +56,7 @@ export default BaseCompenent.extend({
           productGroup : item.GroupID,
           country : item.CountryID,
           producter : item.ProducterID,
-          supplier : item.SupplierID,
-          importPrice : item.ImportPrice
+          supplier : item.SupplierID
         });
         this.setProperties({
           productGroup : item.GroupID,
@@ -64,6 +64,7 @@ export default BaseCompenent.extend({
           producter : item.ProducterID,
           supplier : item.SupplierID,
           note : item.Descriptions,
+          importPrice : item.ImportPrice,
           productId : item.ID
         });
         this.fillDataToEditTable(item.ID);
@@ -75,8 +76,8 @@ export default BaseCompenent.extend({
           productGroup : null,
           country : null,
           producter : null,
-          supplier : null,
-          importPrice : null
+          supplier : null
+
         });
         this.setProperties({
           productGroup : null,
@@ -84,7 +85,8 @@ export default BaseCompenent.extend({
           producter : null,
           supplier : null,
           note : null,
-          productId : null
+          productId : null,
+          importPrice : null
         });
         this.fillDataToEditTable();
       }
@@ -146,19 +148,20 @@ export default BaseCompenent.extend({
       rate.val(result).blur();
     },
     calculateSellPrice : function() {
-      let changeset = this.get('changeset');
-      let importPrice = Number(changeset.get('importPrice'));
+      let self = this;
+      let importPrice = Number(self.get('importPrice'));
       let sellTypeData = this.get('sellType');
       let index = 0;
-      sellTypeDate.forEach(function(r) {
+      sellTypeData.forEach(function(r) {
+        let rate = $("#rate" + index);
+        let sellPrice = $("#price" + index);
+
+        let result =  importPrice + (importPrice * self.convertStringToNumber(rate.val())/100);
+        result = Number((result/1000).toFixed(0))*1000;
+        sellPrice.val(result).blur();
         index++;
       });
-      let rate = $("#rate" + index);
-      let sellPrice = $("#price" + index);
 
-      let result =  importPrice + (importPrice * this.convertStringToNumber(rate.val())/100);
-      result = Number((result/1000).toFixed(0))*1000;
-      sellPrice.val(result).blur();
     }
   }
 });
