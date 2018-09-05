@@ -4,7 +4,9 @@ import lookupValidator from 'ember-changeset-validations';
 import Changeset from 'ember-changeset';
 import $ from 'jquery';
 import { FunctionNames } from 'ember-clinic-management/utils/enums';
+import numeral from 'numeral';
 
+import { copy } from '@ember/object/internals';
 
 export default BaseCompenent.extend({
   resultSearch : null,
@@ -14,7 +16,6 @@ export default BaseCompenent.extend({
   errorMsg : null,
   productId : null,
   importPrice : null,
-  test : 5230/100,
   init() {
     this._super(...arguments);
     this.changeset = new Changeset(this, lookupValidator(ProductValidations), ProductValidations, { skipValidate : true });
@@ -64,7 +65,7 @@ export default BaseCompenent.extend({
           producter : item.ProducterID,
           supplier : item.SupplierID,
           note : item.Descriptions,
-          importPrice : item.ImportPrice,
+          importPrice : numeral(item.ImportPrice).format('#,#'),
           productId : item.ID
         });
         this.fillDataToEditTable(item.ID);
@@ -86,7 +87,7 @@ export default BaseCompenent.extend({
           supplier : null,
           note : null,
           productId : null,
-          importPrice : null
+          importPrice : 0
         });
         this.fillDataToEditTable();
       }
@@ -140,28 +141,26 @@ export default BaseCompenent.extend({
       this.send("searchProduct");
     },
     calculateRate : function(index) {
-      let changeset = this.get('changeset');
-      let rate = $("#rate" + index);
-      let sellPrice = $("#price" + index);
-      let importPrice = Number(changeset.get('importPrice'));
-      let result = (this.convertStringToNumber(sellPrice.val()) - importPrice)/importPrice * 100;
-      rate.val(result).blur();
+      let sellTypeData = copy(this.get('sellType'), true) ;
+      let importPrice = this.convertStringToNumber(this.get('importPrice'));
+      let obj = sellTypeData[index];
+      let sellPrice = this.convertStringToNumber($("#price" + index).val());
+      let result = (sellPrice - importPrice)/importPrice * 100;
+      obj['Price'] = sellPrice.toString();
+      obj['InterestRate'] = result.toString();
+      this.set('sellType', sellTypeData);
     },
     calculateSellPrice : function() {
       let self = this;
-      let importPrice = Number(self.get('importPrice'));
-      let sellTypeData = this.get('sellType');
-      let index = 0;
+      self.set('importPrice', numeral(self.get('importPrice')).format('#,#'));
+      let importPrice = self.convertStringToNumber(self.get('importPrice'));
+      let sellTypeData = copy(this.get('sellType'), true) ;
       sellTypeData.forEach(function(r) {
-        let rate = $("#rate" + index);
-        let sellPrice = $("#price" + index);
-
-        let result =  importPrice + (importPrice * self.convertStringToNumber(rate.val())/100);
-        result = Number((result/1000).toFixed(0))*1000;
-        sellPrice.val(result).blur();
-        index++;
+        let rate = r['InterestRate'];
+        let result =  importPrice + (importPrice * self.convertStringToNumber(rate)/100);
+        r['Price'] = result.toString();
       });
-
-    }
+      self.set('sellType', sellTypeData);
+    },
   }
 });
