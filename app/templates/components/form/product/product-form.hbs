@@ -167,16 +167,17 @@
             </div>
           </div>
         </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              Giá nhập <span class="required">*</span>
+              {{input value=importPrice class="form-control" focus-out="calculateSellPrice"}}
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-6">
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-10">
-                  Giá nhập <span class="required">*</span>
-                  {{input value=importPrice class="form-control" focus-out="calculateSellPrice"}}
-                </div>
-              </div>
-            </div>
+
             <div class="table-responsive">
               <table id="tableSellType" class="table table-bordred table-striped tabled-small">
                 <thead>
@@ -203,9 +204,6 @@
             </div>
           </div>
           <div class="col-md-6 padding-right">
-            <div class="form-group" style="padding-top: 24px; float: right;">
-              <button type="button" class="btn btn-primary" {{action "saveEditCustomer"}} >Đơn vị</button>
-            </div>
             <div class="table-responsive">
               <table id="tableSellUnit" class="table table-bordred table-striped tabled-small">
                 <thead>
@@ -218,7 +216,7 @@
                 {{#each productUnit as | item index|}}
                   <tr>
                     <td>{{inc index}}</td>
-                    <td>{{input type="checkbox" name=(concat "ckUnit" index) checked=(eq item.checked 'true')}}</td>
+                    <td><input type="checkbox" name={{concat "ckUnit" index}} checked={{eq item.checked 'true'}} index={{index}} onclick={{action "checkedUnit" value="target"}}/></td>
                     <td>{{item.Name}}</td>
                     <td>{{item.Exchange}}</td>
                   </tr>
@@ -230,7 +228,7 @@
           </div>
         </div>
         <div class="modal-footer ">
-          <button type="button" class="btn btn-success btn-lg" {{action "saveEditCustomer"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditProduct"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
         </div>
       </form>
     </div>
@@ -239,4 +237,4 @@
   <!-- /.modal-dialog -->
 </div>
 
-{{common/modal-delete-form title="Xóa sản phẩm" apiUrl="delete-product" paramValue=productId pramName="productId" parent=this callback="searchProduct"}}
+{{common/modal-delete-form title="Xóa sản phẩm" apiUrl="product/delete-product" paramValue=productId pramName="productId" parent=this callback="searchProduct"}}

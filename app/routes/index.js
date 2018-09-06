@@ -28,7 +28,7 @@ export default Route.extend({
   getUserSetting() {
     let ajax = this.get('ajax');
     let bootstrap = this.get('bootstrap');
-    ajax.get('search-setting.php').then((r) => {
+    ajax.get('setting/search-setting.php').then((r) => {
       if (r.type === 'DATA' && r.data) {
         bootstrap.pushSettingModel(r.data[0]);
       }

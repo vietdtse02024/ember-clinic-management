@@ -23,7 +23,7 @@ export default Component.extend({
     searchStaff() {
       let ajax = this.get('ajax');
       let self = this;
-      ajax.get('search-staff.php').then((r) => {
+      ajax.get('staff/search-staff.php').then((r) => {
         if (r.type === 'DATA' && r.data) {
           self.set('resultSearch', r.data);
         }
@@ -32,7 +32,7 @@ export default Component.extend({
     editStaff(staffId){
       let self = this;
       let ajax = this.get('ajax');
-      ajax.get('search-staff-edit.php?staffId='+staffId).then((r) => {
+      ajax.get('staff/search-staff-edit.php?staffId='+staffId).then((r) => {
         if (r.type === 'DATA' && r.data) {
           let data = r.data[0];
           self.get('changeset').setProperties({
@@ -76,7 +76,7 @@ export default Component.extend({
         if (changeset.get('isValid')) {
           changeset.execute();
           changeset.save();
-          ajax.postJsonData('save-staff.php', jsonData).then((r) => {
+          ajax.postJsonData('staff/save-staff.php', jsonData).then((r) => {
             if (r && r.result == "SUCCESS") {
               self.set('successMsg', "Cập nhật thông tin thành công");
               self.set('errorMsg', null);
@@ -152,7 +152,7 @@ export default Component.extend({
         "password" : changeset.get('password'),
         "userLogin" : bootstrap.get('userModel').ID
       };
-      ajax.postJsonData('change-password.php', jsonData).then((r) => {
+      ajax.postJsonData('staff/change-password.php', jsonData).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Đổi mật khẩu thành công");
           self.set('errorMsg', null);

@@ -18,7 +18,7 @@ export default Component.extend({
   searchRole() {
     let ajax = this.get('ajax');
     let self = this;
-    ajax.get('search-role.php').then((r) => {
+    ajax.get('role/search-role.php').then((r) => {
       if (r.type === 'DATA' && r.data) {
         self.set('resultSearch', r.data);
       }
@@ -29,7 +29,7 @@ export default Component.extend({
       let self = this;
       let ajax = this.get('ajax');
       $("input[type=checkbox]").prop('checked', false);
-      ajax.get('search-role-edit.php?roleId='+roleId).then((r) => {
+      ajax.get('role/search-role-edit.php?roleId='+roleId).then((r) => {
         if (r.type === 'DATA' && r.data) {
           let data = r.data;
           data.forEach(function(item) {
@@ -71,7 +71,7 @@ export default Component.extend({
       }
 
       jsonData.roleData = checkedList;
-      ajax.postJsonData('save-role.php', jsonData).then((r) => {
+      ajax.postJsonData('role/save-role.php', jsonData).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Cập nhật thông tin thành công");
           self.set('errorMsg', null);
@@ -94,7 +94,7 @@ export default Component.extend({
     confirmDeleteRole(){
       let self = this;
       let ajax = this.get('ajax');
-      ajax.get('delete-role.php?roleId='+self.get('roleId')).then((r) => {
+      ajax.get('role/delete-role.php?roleId='+self.get('roleId')).then((r) => {
         if (r && r.result === 'SUCCESS') {
           self.set('errorMsg', null);
           self.set('successMsg', "Xóa thành công");

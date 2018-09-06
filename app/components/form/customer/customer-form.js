@@ -19,7 +19,7 @@ export default Component.extend({
     searchCustomer() {
       let ajax = this.get('ajax');
       let self = this;
-      ajax.get('search-customer.php?customerId=' + this.get('changeset').get('customerIdSearch')).then((r) => {
+      ajax.get('customer/search-customer.php?customerId=' + this.get('changeset').get('customerIdSearch')).then((r) => {
         if (r.type === 'DATA' && r.data) {
           self.set('resultSearch', r.data);
         }
@@ -28,7 +28,7 @@ export default Component.extend({
     editCustomer(customerId){
       let self = this;
       let ajax = this.get('ajax');
-      ajax.get('search-customer.php?customerId='+customerId).then((r) => {
+      ajax.get('customer/search-customer.php?customerId='+customerId).then((r) => {
         if (r.type === 'DATA' && r.data) {
           let data = r.data[0];
           self.setProperties({
@@ -69,7 +69,7 @@ export default Component.extend({
         "customerId": self.get('customerId')
       };
 
-      ajax.postJsonData('save-customer.php', jsonData).then((r) => {
+      ajax.postJsonData('customer/save-customer.php', jsonData).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Cập nhật thông tin thành công");
           self.set('errorMsg', null);

@@ -25,7 +25,7 @@ export default Component.extend({
       let bootstrap = this.get('bootstrap');
       self.set('successMsg', null);
       self.set('errorMsg', null);
-      ajax.postFormData('save-setting.php', $("#option-form").serialize()).then((r) => {
+      ajax.postFormData('setting/save-setting.php', $("#option-form").serialize()).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Lưu thông tin cài đặt thành công");
           self.set('errorMsg', null);

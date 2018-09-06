@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/components/form/product/product-form.js" line="157" />
+    <bookmark url="file://$PROJECT_DIR$/app/components/form/product/product-form.js" line="189" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2711930-4a34-4a22-bf8f-6ffc70bc9e97" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/customer/customer-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/customer/customer-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/customer/doctor-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/customer/doctor-form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/form/product/product-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/product/product-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/setting/option-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/setting/option-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/setting/role-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/setting/role-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/form/setting/staff-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/form/setting/staff-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/components/form/product/product-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/form/product/product-form.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="product-form.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product-form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/form/product/product-form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="160" column="39" lean-forward="true" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
+            <state relative-caret-position="534">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
               <folding>
                 <element signature="e#0#85#0" expanded="true" />
               </folding>
@@ -29,11 +39,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="staff-form.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/form/setting/staff-form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="role-form.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/form/setting/role-form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="70" column="7" selection-start-line="63" selection-start-column="6" selection-end-line="70" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="product-form.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/components/form/product/product-form.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -50,50 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enums.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/utils/enums.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8228">
-              <caret line="484" column="17" selection-start-line="484" selection-start-column="17" selection-end-line="484" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text-field.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/common/text-field.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text-field.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/components/common/text-field.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base-component.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base-component.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/common/base-component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="425">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="12" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -139,6 +128,7 @@
       <find>editProduct</find>
       <find>showFL</find>
       <find>importPrice</find>
+      <find>searchProduct</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -154,15 +144,12 @@
         <option value="$PROJECT_DIR$/app/components/app-header.js" />
         <option value="$PROJECT_DIR$/app/templates/index.hbs" />
         <option value="$PROJECT_DIR$/app/templates/index/setting/index/role.hbs" />
-        <option value="$PROJECT_DIR$/app/routes/index.js" />
-        <option value="$PROJECT_DIR$/app/components/form/setting/option-form.js" />
         <option value="$PROJECT_DIR$/app/templates/components/form/setting/role-form.hbs" />
         <option value="$PROJECT_DIR$/app/templates/application.hbs" />
         <option value="$PROJECT_DIR$/app/templates/components/common/loading-overlay.hbs" />
         <option value="$PROJECT_DIR$/app/templates/index/setting/index.hbs" />
         <option value="$PROJECT_DIR$/app/templates/index/setting/index/staff.hbs" />
         <option value="$PROJECT_DIR$/app/routes/index/setting/index.js" />
-        <option value="$PROJECT_DIR$/app/components/form/setting/role-form.js" />
         <option value="$PROJECT_DIR$/app/components/common/selectpicker-field.js" />
         <option value="$PROJECT_DIR$/app/components/common/enum-drop-down.js" />
         <option value="$PROJECT_DIR$/ember-cli-build.js" />
@@ -181,15 +168,9 @@
         <option value="$PROJECT_DIR$/app/templates/components/common/model-delete-form.hbs" />
         <option value="$PROJECT_DIR$/app/components/common/model-delete-form.js" />
         <option value="$PROJECT_DIR$/app/templates/components/common/modal-delete-form.hbs" />
-        <option value="$PROJECT_DIR$/app/components/form/customer/customer-form.js" />
-        <option value="$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs" />
-        <option value="$PROJECT_DIR$/app/components/form/customer/doctor-form.js" />
-        <option value="$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs" />
-        <option value="$PROJECT_DIR$/app/components/form/setting/staff-form.js" />
         <option value="$PROJECT_DIR$/app/components/common/message-form.js" />
         <option value="$PROJECT_DIR$/app/components/common/modal-delete-form.js" />
         <option value="$PROJECT_DIR$/app/templates/components/common/message-form.hbs" />
-        <option value="$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/components/common/drop-down.js" />
         <option value="$PROJECT_DIR$/app/utils/enum.js" />
@@ -198,10 +179,19 @@
         <option value="$PROJECT_DIR$/app/styles/app.css" />
         <option value="$PROJECT_DIR$/app/components/common/text-field.js" />
         <option value="$PROJECT_DIR$/app/templates/components/common/text-field.hbs" />
-        <option value="$PROJECT_DIR$/app/components/common/base-component.js" />
         <option value="$PROJECT_DIR$/app/validations/product/product.js" />
+        <option value="$PROJECT_DIR$/app/components/form/customer/customer-form.js" />
+        <option value="$PROJECT_DIR$/app/components/form/customer/doctor-form.js" />
+        <option value="$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs" />
+        <option value="$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs" />
+        <option value="$PROJECT_DIR$/app/components/form/setting/role-form.js" />
+        <option value="$PROJECT_DIR$/app/components/form/setting/option-form.js" />
+        <option value="$PROJECT_DIR$/app/routes/index.js" />
+        <option value="$PROJECT_DIR$/app/components/form/setting/staff-form.js" />
+        <option value="$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs" />
         <option value="$PROJECT_DIR$/app/templates/components/form/product/product-form.hbs" />
         <option value="$PROJECT_DIR$/app/components/form/product/product-form.js" />
+        <option value="$PROJECT_DIR$/app/components/common/base-component.js" />
       </list>
     </option>
   </component>
@@ -336,16 +326,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-MZuCJ3zG.tmp/0/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-MZuCJ3zG.tmp/0/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-MZuCJ3zG.tmp/1/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-N7NmrOtL.tmp/1/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-N7NmrOtL.tmp/1/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-N7NmrOtL.tmp/1/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-N7NmrOtL.tmp/1/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-N7NmrOtL.tmp/1/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OgWWK5qn.tmp/0/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OgWWK5qn.tmp/0/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OgWWK5qn.tmp/0/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OgWWK5qn.tmp/0/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OgWWK5qn.tmp/0/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OhfaIK3s.tmp/0/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OhfaIK3s.tmp/0/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-OhfaIK3s.tmp/0/bower_components/simple-line-icons/package.json" />
@@ -361,11 +341,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-Pkl7Rm4P.tmp/0/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-Pkl7Rm4P.tmp/0/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-Pkl7Rm4P.tmp/0/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-QDBpILBr.tmp/0/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-QDBpILBr.tmp/0/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-QDBpILBr.tmp/0/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-QDBpILBr.tmp/0/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-QDBpILBr.tmp/0/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-RurQyegF.tmp/0/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-RurQyegF.tmp/0/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-RurQyegF.tmp/0/bower_components/simple-line-icons/package.json" />
@@ -394,17 +369,11 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-VrZamHk2.tmp/1/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-VrZamHk2.tmp/1/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-W9T6hXkx.tmp/6/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-XxxOzKKB.tmp/6/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-ZUzjKis3.tmp/0/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-ZUzjKis3.tmp/0/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-ZUzjKis3.tmp/0/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-ZUzjKis3.tmp/0/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-ZUzjKis3.tmp/0/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-b4d5mXab.tmp/0/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-b4d5mXab.tmp/0/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-b4d5mXab.tmp/0/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-b4d5mXab.tmp/0/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-b4d5mXab.tmp/1/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-c0os0Ls0.tmp/0/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-c0os0Ls0.tmp/0/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-c0os0Ls0.tmp/0/bower_components/simple-line-icons/package.json" />
@@ -425,11 +394,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cEmzO7CM.tmp/0/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cEmzO7CM.tmp/0/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cEmzO7CM.tmp/1/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGpNhpX1.tmp/0/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGpNhpX1.tmp/0/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGpNhpX1.tmp/0/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGpNhpX1.tmp/0/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGpNhpX1.tmp/0/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGuItQSk.tmp/0/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGuItQSk.tmp/0/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-input_base_path-cGuItQSk.tmp/0/bower_components/simple-line-icons/package.json" />
@@ -530,11 +494,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-22LD7KFT.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-22LD7KFT.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-22LD7KFT.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3CmbHXYq.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3CmbHXYq.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3CmbHXYq.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3CmbHXYq.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3CmbHXYq.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3XQoB2zc.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3XQoB2zc.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-3XQoB2zc.tmp/bower_components/simple-line-icons/package.json" />
@@ -590,11 +549,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-I1TdkqF5.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-I1TdkqF5.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-I1TdkqF5.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JInwXpBv.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JInwXpBv.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JInwXpBv.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JInwXpBv.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JInwXpBv.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JLyKwPuR.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JLyKwPuR.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-JLyKwPuR.tmp/bower_components/simple-line-icons/package.json" />
@@ -688,11 +642,6 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YKefne1n.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YKefne1n.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YKefne1n.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YRkW1JzQ.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YRkW1JzQ.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YRkW1JzQ.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YRkW1JzQ.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YRkW1JzQ.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YnmwGefd.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YnmwGefd.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-YnmwGefd.tmp/bower_components/simple-line-icons/package.json" />
@@ -724,24 +673,13 @@
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-bw3sQLDq.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-bw3sQLDq.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-bw3sQLDq.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-c2jsp8Te.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cM5y1PSQ.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cM5y1PSQ.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cM5y1PSQ.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cM5y1PSQ.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cM5y1PSQ.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-cQSCWDep.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-fRrgGjSR.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-fRrgGjSR.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-fRrgGjSR.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-fRrgGjSR.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-fRrgGjSR.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-gAjyrHiT.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-h6Uyq396.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-h6Uyq396.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-h6Uyq396.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-h6Uyq396.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-h6Uyq396.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-hbelOyjH.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-hbelOyjH.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/broccoli_merge_trees-output_path-hbelOyjH.tmp/bower_components/simple-line-icons/package.json" />
@@ -860,22 +798,12 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1a2SG4ym.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1a2SG4ym.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1a2SG4ym.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1xn3dkeG.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1xn3dkeG.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1xn3dkeG.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1xn3dkeG.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-1xn3dkeG.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-2711uKnC.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-42s3JDGi.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-42s3JDGi.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-42s3JDGi.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-42s3JDGi.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-42s3JDGi.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4DYnDDU9.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4DYnDDU9.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4DYnDDU9.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4DYnDDU9.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4DYnDDU9.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4wfCNMw2.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4wfCNMw2.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-4wfCNMw2.tmp/bower_components/simple-line-icons/package.json" />
@@ -964,7 +892,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-GQ8w7l2g.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-Gwg9JAng.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-HhDY888k.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-IAFhOQcX.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-IdUM9Bab.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-IdUM9Bab.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-IdUM9Bab.tmp/bower_components/simple-line-icons/package.json" />
@@ -1000,11 +927,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-PM8v8fFg.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-PM8v8fFg.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-PM8v8fFg.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-QjYaPJKy.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-QjYaPJKy.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-QjYaPJKy.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-QjYaPJKy.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-QjYaPJKy.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-RAZ4nXAr.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-SfZcWymS.tmp/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-SfZcWymS.tmp/bootstrap/package.json" />
@@ -1020,10 +942,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-USfX7JwF.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-USfX7JwF.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-USfX7JwF.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-UbuQ3GHo.tmp/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-UbuQ3GHo.tmp/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-UbuQ3GHo.tmp/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-UbuQ3GHo.tmp/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-VBmKkyzZ.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-VBmKkyzZ.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-VBmKkyzZ.tmp/bower_components/simple-line-icons/package.json" />
@@ -1072,11 +990,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-baXYBsHx.tmp/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-baXYBsHx.tmp/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-bwyIF49P.tmp/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-byBppPFB.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-byBppPFB.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-byBppPFB.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-byBppPFB.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-byBppPFB.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-cGtEPAMB.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-cjtMP2C9.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-ddBwPSoz.tmp/bower_components/bootstrap-datepicker/package.json" />
@@ -1156,14 +1069,7 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-o3JiU0DZ.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-o5xvtFZb.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-oy4xPRUR.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pdlIoxKj.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pugVlz87.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pugVlz87.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pugVlz87.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pugVlz87.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-pugVlz87.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-rlkxB4mC.tmp/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-sxDrkDby.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-t57AIri0.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-t57AIri0.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-t57AIri0.tmp/bower_components/simple-line-icons/package.json" />
@@ -1202,13 +1108,11 @@
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-xYddkGrm.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-xYddkGrm.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-xoEvDjSk.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-zX0EOI6K.tmp/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-zkjLnYuU.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-zkjLnYuU.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-zkjLnYuU.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-input_base_path-zkjLnYuU.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-0YKEnrw5.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-3bHnS2pY.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-6RzifoMW.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-6RzifoMW.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-6RzifoMW.tmp/bower_components/simple-line-icons/package.json" />
@@ -1218,10 +1122,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-CxT6D6u1.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-FxjFyutg.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-HNVzgCPq.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-LIxlAys2.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-LIxlAys2.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-LIxlAys2.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-LIxlAys2.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-OGd9iV8A.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-OiQPooSz.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-OsL3GwME.tmp/bower_components/bootstrap-datepicker/package.json" />
@@ -1256,7 +1156,6 @@
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-iGtMY56k.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-khNcCdCP.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-m7atZVWy.tmp/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/funnel-output_path-mY3BwlpV.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-pRC6Q8oH.tmp/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-puzsvdZ1.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/funnel-output_path-puzsvdZ1.tmp/bower_components/bootstrap/package.json" />
@@ -25371,11 +25270,6 @@
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-JU8JPdlr.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-JU8JPdlr.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-JU8JPdlr.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-NFC8XwZe.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-NFC8XwZe.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-NFC8XwZe.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-NFC8XwZe.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-NFC8XwZe.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-P4QyaFDO.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-P4QyaFDO.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-P4QyaFDO.tmp/bower_components/simple-line-icons/package.json" />
@@ -25419,11 +25313,6 @@
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-r24J17a2.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-r24J17a2.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-r24J17a2.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-sQCgOSW9.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-sQCgOSW9.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-sQCgOSW9.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-sQCgOSW9.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-sQCgOSW9.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-t9bR7vWB.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-t9bR7vWB.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/simple_concat_concat-input_base_path-t9bR7vWB.tmp/bower_components/simple-line-icons/package.json" />
@@ -25479,21 +25368,6 @@
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-8safpi4j.tmp/bower_components/simple-line-icons/package.json" />
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-8safpi4j.tmp/bower_components/tether/package.json" />
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-8safpi4j.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-9I51Yle0.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-9I51Yle0.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-9I51Yle0.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-9I51Yle0.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-9I51Yle0.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-Fjp0Ns8r.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-Fjp0Ns8r.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-Fjp0Ns8r.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-Fjp0Ns8r.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-Fjp0Ns8r.tmp/vendor/regenerator-runtime/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GDgUbaYT.tmp/bower_components/bootstrap-datepicker/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GDgUbaYT.tmp/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GDgUbaYT.tmp/bower_components/simple-line-icons/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GDgUbaYT.tmp/bower_components/tether/package.json" />
-      <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GDgUbaYT.tmp/vendor/regenerator-runtime/package.json" />
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GmrQZOHk.tmp/bower_components/bootstrap-datepicker/package.json" />
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GmrQZOHk.tmp/bower_components/bootstrap/package.json" />
       <path value="$PROJECT_DIR$/tmp/source_map_concat-input_base_path-GmrQZOHk.tmp/bower_components/simple-line-icons/package.json" />
@@ -25661,6 +25535,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -25699,13 +25574,74 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
               <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ember-clinic-management" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="form" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ember-clinic-management" type="b2602c69:ProjectViewProjectNode" />
@@ -25730,7 +25666,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -25839,6 +25774,7 @@
       <workItem from="1535681441556" duration="6845000" />
       <workItem from="1536030101807" duration="6856000" />
       <workItem from="1536114475261" duration="9113000" />
+      <workItem from="1536202219077" duration="16109000" />
     </task>
     <task id="LOCAL-00001" summary="commit project">
       <created>1530687465083</created>
@@ -25851,7 +25787,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246107000" />
+    <option name="totallyTimeSpent" value="262216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -25867,10 +25803,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" visible="true" weight="0.32897604" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -25888,17 +25824,17 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32897604" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23134328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -25908,13 +25844,13 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49840087" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946696" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.32897604" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23134328" />
+      <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -25933,36 +25869,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/routes/index/setting/index/role.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/index/setting/index/option.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/index/setting/index/staff.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/common/drop-down.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/public/js/popper.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -26031,34 +25937,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/components/common/model-delete-form.hbs" />
     <entry file="file://$PROJECT_DIR$/app/components/common/model-delete-form.js" />
-    <entry file="file://$PROJECT_DIR$/app/components/form/customer/doctor-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="185" column="79" selection-start-line="185" selection-start-column="79" selection-end-line="185" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/form/customer/customer-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="164" column="6" selection-start-line="164" selection-start-column="6" selection-end-line="164" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/common/message-alert.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -26111,13 +25989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/components/common/modal-delete-form.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -26136,13 +26007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/form/setting/staff-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -26195,17 +26059,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/form/setting/role-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="61" column="9" selection-start-line="57" selection-start-column="55" selection-end-line="61" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/components/common/text-field.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/common/text-field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -26219,39 +26086,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/common/text-field.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/components/form/customer/doctor-form.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="466">
+          <caret line="161" column="60" selection-start-line="161" selection-start-column="60" selection-end-line="161" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/form/customer/customer-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="166" column="58" selection-start-line="166" selection-start-column="58" selection-end-line="166" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/customer/doctor-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-520">
+          <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/account/login-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/common/base-component.js">
+    <entry file="file://$PROJECT_DIR$/app/components/form/setting/option-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="459">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/form/setting/staff-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="185" column="69" selection-start-line="185" selection-start-column="69" selection-end-line="185" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/form/setting/option-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-537" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/form/setting/role-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3101" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197">
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/customer/customer-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/setting/role-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="70" column="7" selection-start-line="63" selection-start-column="6" selection-end-line="70" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/setting/staff-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="94" column="9" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/form/product/product-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/components/form/product/product-form.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/form/product/product-form.js">
+    <entry file="file://$PROJECT_DIR$/app/components/common/base-component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="160" column="39" lean-forward="true" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
+        <state relative-caret-position="425">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="12" />
           <folding>
-            <element signature="e#0#85#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

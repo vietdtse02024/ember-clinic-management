@@ -40,13 +40,17 @@ export default BaseCompenent.extend({
     searchProduct() {
       let ajax = this.get('ajax');
       let self = this;
-      ajax.get('search-product.php?productId=' + this.get('changeset').get('productIdSearch')).then((r) => {
+      ajax.get('product/search-product.php?productId=' + this.get('changeset').get('productIdSearch')).then((r) => {
         if (r.type === 'DATA' && r.data) {
           self.set('resultSearch', r.data);
         }
       });
     },
     editProduct(item){
+      this.setProperties({
+        successMsg: null,
+        errorMsg: null
+      });
       let ajax = this.get('ajax');
       let changeset = this.get('changeset');
       if (item) {
@@ -95,37 +99,65 @@ export default BaseCompenent.extend({
         refresh: true
       });
     },
-    saveEditCustomer(){
+    saveEditProduct(){
       let self = this;
       let ajax = this.get('ajax');
       let changeset = this.get('changeset');
       let jsonData = {
-        "customerName": changeset.get('customerName'),
-        "phoneNo": changeset.get('phoneNo'),
-        "email": changeset.get('email'),
-        "province" : changeset.get('province'),
-        "district" : changeset.get('district'),
-        "address" : changeset.get('address'),
+        "productId": self.get('productId'),
+        "productCode": changeset.get('productCode'),
+        "productName": changeset.get('productName'),
+        "supplier": changeset.get('supplier'),
+        "productGroup" : changeset.get('productGroup'),
+        "country" : changeset.get('country'),
+        "producter" : changeset.get('producter'),
         "note" : self.get('note'),
-        "customerId": self.get('customerId')
+        "importPrice": self.convertStringToNumber(self.get('importPrice').toString()),
+        "sellType" : self.get('sellType')
       };
-
-      ajax.postJsonData('save-customer.php', jsonData).then((r) => {
-        if (r && r.result == "SUCCESS") {
-          self.set('successMsg', "Cập nhật thông tin thành công");
-          self.set('errorMsg', null);
-
-        } else {
-          self.set('errorMsg', r.message);
-          self.set('successMsg', null);
+      var checkedUnitList = new Array();
+      self.get('productUnit').forEach(function(r) {
+        if (r.checked === 'true') {
+          checkedUnitList.push(r);
         }
-        self.searchCustomer();
-
-      }, function () {
-        self.set('errorMsg', "Có lỗi xảy ra.");
-        self.set('successMsg', null);
       });
-      $('#edit').modal('toggle');
+      jsonData.productUnit = checkedUnitList;
+
+      let snapshot = changeset.snapshot();
+      changeset.validate().then(() => {
+        if (changeset.get('isValid')) {
+          changeset.execute();
+          changeset.save();
+          if (checkedUnitList.length === 0) {
+            this.setProperties({
+              errorMsg : "Bạn hãy chọn đơn vị sử dụng cho sản phẩm"
+            });
+            $('#edit').modal('toggle');
+            return;
+          }
+
+          ajax.postJsonData('product/save-product.php', jsonData).then((r) => {
+            if (r && r.result == "SUCCESS") {
+              self.set('successMsg', "Cập nhật thông tin thành công");
+              self.set('errorMsg', null);
+
+            } else {
+              self.set('errorMsg', r.message);
+              self.set('successMsg', null);
+            }
+            self.send("searchProduct");
+
+          }, function () {
+            self.set('errorMsg', "Có lỗi xảy ra.");
+            self.set('successMsg', null);
+          });
+          $('#edit').modal('toggle');
+        }
+      }).catch(() => {
+        changeset.restore(snapshot);
+      });
+
+
     },
     deleteProduct(productId){
       this.set('productId', productId);
@@ -162,5 +194,11 @@ export default BaseCompenent.extend({
       });
       self.set('sellType', sellTypeData);
     },
+    checkedUnit : function(e) {
+      let productUnit = copy(this.get('productUnit'), true) ;
+      let obj = productUnit[e.getAttribute('index')];
+      obj.checked = e.checked.toString();
+      this.set('productUnit', productUnit);
+    }
   }
 });

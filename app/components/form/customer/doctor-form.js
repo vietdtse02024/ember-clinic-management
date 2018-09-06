@@ -21,7 +21,7 @@ export default Component.extend({
     searchDoctor() {
       let ajax = this.get('ajax');
       let self = this;
-      ajax.get('search-doctor.php?doctorId=' + this.get('changeset').get('doctorIdSearch')).then((r) => {
+      ajax.get('doctor/search-doctor.php?doctorId=' + this.get('changeset').get('doctorIdSearch')).then((r) => {
         if (r.type === 'DATA' && r.data) {
           self.set('resultSearch', r.data);
         }
@@ -30,7 +30,7 @@ export default Component.extend({
     editDoctor(doctorId){
       let self = this;
       let ajax = this.get('ajax');
-      ajax.get('search-doctor.php?doctorId='+doctorId).then((r) => {
+      ajax.get('doctor/search-doctor.php?doctorId='+doctorId).then((r) => {
         if (r.type === 'DATA' && r.data) {
           let data = r.data[0];
           self.setProperties({
@@ -71,7 +71,7 @@ export default Component.extend({
         "doctorId": self.get('doctorId')
       };
 
-      ajax.postJsonData('save-doctor.php', jsonData).then((r) => {
+      ajax.postJsonData('doctor/save-doctor.php', jsonData).then((r) => {
         if (r && r.result == "SUCCESS") {
           self.set('successMsg', "Cập nhật thông tin thành công");
           self.set('errorMsg', null);
