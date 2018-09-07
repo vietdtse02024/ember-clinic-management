@@ -1,12 +1,7 @@
 <div class="main-body">
   <h1 class="box-title">Thông tin sản phẩm</h1>
   <div class="main-content">
-    {{#if successMsg}}
-      <div class="alert alert-success">{{successMsg}}</div>
-    {{/if}}
-    {{#if errorMsg}}
-      <div class="alert alert-danger">{{errorMsg}}</div>
-    {{/if}}
+    {{common/message-form successMsg=successMsg errorMsg=errorMsg}}
     <div class="row col-md-12">
       <div class="col-md-4">
         <div class="form-group">
@@ -24,7 +19,7 @@
       <button class="btn btn-primary" {{action "search"}}><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
       <button class="btn btn-success" {{action "editProduct"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
     </div>
-    <form id="customer-form">
+    <form id="product-form">
 
       <div class="row">
         <div class="col-md-12">

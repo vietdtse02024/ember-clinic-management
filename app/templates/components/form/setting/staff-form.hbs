@@ -6,12 +6,7 @@
       <button class="btn btn-success" {{action "addStaff"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
     </div>
     <form id="role-form">
-      {{#if successMsg}}
-        <div class="alert alert-success">{{successMsg}}</div>
-      {{/if}}
-      {{#if errorMsg}}
-        <div class="alert alert-danger">{{errorMsg}}</div>
-      {{/if}}
+      {{common/message-form successMsg=successMsg errorMsg=errorMsg}}
       <div class="row">
         <div class="col-md-12">
           <div class="table-responsive">

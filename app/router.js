@@ -27,6 +27,12 @@ Router.map(function() {
     this.route('product', function() {
       this.route('index', { path: '/' }, function() {
         this.route('product');
+        this.route('product-group');
+        this.route('unit');
+        this.route('country');
+        this.route('producer');
+        this.route('supplier');
+        this.route('barcode');
       });
     });
   });

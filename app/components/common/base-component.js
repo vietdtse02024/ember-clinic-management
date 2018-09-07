@@ -38,6 +38,14 @@ export default Component.extend({
   },
   convertStringToNumber : function(s){
     return Number(s.replace(/[^\d.]/g, ''))
+  },
+  openModal : function (id) {
+    $("#" + id).modal({
+      refresh: true
+    });
+  },
+  toggleModal : function (id) {
+    $('#' + id).modal('toggle');
   }
 
 

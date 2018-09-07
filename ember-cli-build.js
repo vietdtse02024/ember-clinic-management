@@ -36,5 +36,6 @@ module.exports = function(defaults) {
   app.import(bower + '/bootstrap/dist/js/bootstrap.js');
   app.import(bower + '/bootstrap-select/dist/js/bootstrap-select.js');
 
+  app.import('node_modules/jsbarcode/dist/JsBarcode.all.js');
   return app.toTree();
 };

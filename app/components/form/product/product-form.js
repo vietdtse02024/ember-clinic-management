@@ -95,9 +95,7 @@ export default BaseCompenent.extend({
         });
         this.fillDataToEditTable();
       }
-      $("#edit").modal({
-        refresh: true
-      });
+      this.openModal('edit');
     },
     saveEditProduct(){
       let self = this;
@@ -129,10 +127,10 @@ export default BaseCompenent.extend({
           changeset.execute();
           changeset.save();
           if (checkedUnitList.length === 0) {
-            this.setProperties({
+            self.setProperties({
               errorMsg : "Bạn hãy chọn đơn vị sử dụng cho sản phẩm"
             });
-            $('#edit').modal('toggle');
+            self.toggleModal('edit');
             return;
           }
 
@@ -151,7 +149,7 @@ export default BaseCompenent.extend({
             self.set('errorMsg', "Có lỗi xảy ra.");
             self.set('successMsg', null);
           });
-          $('#edit').modal('toggle');
+          self.toggleModal('edit');
         }
       }).catch(() => {
         changeset.restore(snapshot);
@@ -161,9 +159,7 @@ export default BaseCompenent.extend({
     },
     deleteProduct(productId){
       this.set('productId', productId);
-      $("#delete").modal({
-        refresh: true
-      });
+      this.openModal('delete');
     },
     search() {
       this.setProperties({

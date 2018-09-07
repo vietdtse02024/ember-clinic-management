@@ -1,0 +1,91 @@
+<div class="main-body">
+  <h1 class="box-title">Nhà cung cấp</h1>
+  <div class="main-content">
+    {{common/message-form successMsg=successMsg errorMsg=errorMsg}}
+    <div class="box-button">
+      <button class="btn btn-success" {{action "editSupplier"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+    </div>
+    <form id="product-supplier-form">
+
+      <div class="row">
+        <div class="col-md-12">
+          {{page-numbers content=pagedContent showFL=true}}
+          <div class="table-responsive">
+            <table id="mytable" class="table table-bordred table-striped">
+              <thead>
+              <th>STT</th>
+              <th>Tên</th>
+              <th>Ghi chú</th>
+              <th>Sửa</th>
+              <th>Xóa</th>
+              </thead>
+              <tbody>
+
+              {{#each pagedContent as | item index|}}
+                <tr>
+                  <td>{{inc index}}</td>
+                  <td>{{item.SupplierName}}</td>
+                  <td>{{item.Description}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editSupplier" item}}><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger btn-sm" data-title="Delete" {{action "deleteSupplier" item.ID}}><span class="glyphicon glyphicon-trash"></span></button>
+                  </td>
+                </tr>
+              {{/each}}
+              </tbody>
+            </table>
+          </div>
+          {{page-numbers content=pagedContent showFL=true}}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="edit-staff-form">
+        <div class="modal-header">
+
+          <h4 class="modal-title custom_align" id="Heading">{{editModalTitle}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4 title">Tên <span class="required">*</span></div>
+                  <div class="col-md-8 content">
+                    {{common/text-field fieldName="supplierName" changeset=changeset type='text'}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4 title">Ghi chú</div>
+                  <div class="col-md-8 content">
+                    {{common/text-field fieldName="note" changeset=changeset type='text'}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditSupplier"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+{{common/modal-delete-form title="Xóa nhóm sản phẩm" apiUrl="supplier/delete-supplier" paramValue=supplierId pramName="supplierId" parent=this callback="searchSupplier"}}

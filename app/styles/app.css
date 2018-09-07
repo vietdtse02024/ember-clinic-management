@@ -348,6 +348,7 @@ body a {
 .main-menu ul li .active{
   color: #ff0000;
   border-bottom: 1px solid;
+  font-weight: bold;
 }
 
 .table-responsive td .btn-primary{
