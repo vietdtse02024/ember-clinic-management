@@ -6,7 +6,7 @@ import { isBlank } from '@ember/utils';
 /* global JsBarcode */
 
 export default Component.extend({
-  tagName: 'svg',
+  tagName: 'img',
   thisId: null,
 
   defaults: computed(function () {
@@ -22,6 +22,7 @@ export default Component.extend({
       textPosition: this.get('textPosition') || "bottom",
       textMargin:   this.get('textMargin') || 2,
       fontSize:     this.get('fontSize') || 20,
+      text:         this.get('text') || "",
       background:   this.get('background') || "#ffffff",
       lineColor:    this.get('lineColor') || "#000000",
       margin:       isBlank(this.get('margin')) ? 10 : this.get('margin'),

@@ -29,13 +29,13 @@ app.on('window-all-closed', () => {
 });
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({show: false });
+  mainWindow = new BrowserWindow({show: false, webPreferences: {plugins: true} });
   mainWindow.maximize();
   mainWindow.show();
   mainWindow.setMenu(null);
 
   // If you want to open up dev tools programmatically, call
-  // mainWindow.openDevTools();
+  mainWindow.openDevTools();
 
   const emberAppLocation = 'serve://dist';
 

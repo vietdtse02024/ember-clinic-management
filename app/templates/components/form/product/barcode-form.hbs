@@ -1,10 +1,33 @@
 <div class="main-body">
   <h1 class="box-title">Nước sản xuất</h1>
   <div class="main-content">
-    <div class="box-button">
-      <button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
-      {{common/bar-code value="abc123456"}}
+    <div class="box-button" id="printDiv">
+      {{common/bar-code value="abc12345" displayValue=false id="img1"  width=1 height=40 margin=15 marginBottom=1 marginTop=1}}
+    </div>
+    <div>
+      <button class="btn btn-success" {{action "createPdf"}}><i class="glyphicon glyphicon-plus"></i>Tạo Mã vạch</button>
     </div>
   </div>
 </div>
 
+
+
+<div class="modal fade" id="view-pdf" tabindex="-1" role="dialog" aria-labelledby="view-pdf" aria-hidden="true">
+  <div class="modal-dialog  modal-lager">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title custom_align" id="Heading">Barcode</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdf_preview" name="pdf_preview" type="application/pdf" src="{{pdfData}}" width="100%" height="500"></iframe>
+      </div>
+
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-success btn-lg" {{action "print"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> In mã vạch</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>

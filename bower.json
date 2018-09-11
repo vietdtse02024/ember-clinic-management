@@ -19,6 +19,7 @@
     "bootstrap-datepicker": "^1.8.0",
     "bootstrap-select": "^1.13.1",
     "simple-line-icons": "^2.4.1",
-    "glyphicons": "^0.0.2"
+    "glyphicons": "^0.0.2",
+    "pdfmake": "^0.1.38"
   }
 }
