@@ -3,7 +3,6 @@ import $ from 'jquery';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
-  printThis: service(),
   paperWitdth: 312,
   paperHeight: 71,
   init() {
@@ -12,9 +11,6 @@ export default Component.extend({
   },
   actions:{
     print : function(){
-      var PDF = document.getElementById('pdf_preview');
-      PDF.focus();
-      PDF.contentWindow.print();
     },
     createPdf : function(){
       let self = this;
@@ -98,13 +94,31 @@ export default Component.extend({
         ],
 
       };
-      pdfMake.createPdf(docDefinition).print({}, window);
-      /*pdfMake.createPdf(docDefinition).getDataUrl(function(outDoc) {
-        self.set('pdfData', outDoc);
+      let pdfDocGenerator = pdfMake.createPdf(docDefinition);
+      pdfDocGenerator.getBlob((blob) => {
+        var url = URL.createObjectURL(blob);
+        printJS(url);
       });
-      $("#view-pdf").modal({
-        refresh: true
-      });*/
     },
+
+  },
+  blobToUint8Array : function (b) {
+    var uri = URL.createObjectURL(b),
+      xhr = new XMLHttpRequest(),
+      i,
+      ui8;
+
+    xhr.open('GET', uri, false);
+    xhr.send();
+
+    URL.revokeObjectURL(uri);
+
+    ui8 = new Uint8Array(xhr.response.length);
+
+    for (i = 0; i < xhr.response.length; ++i) {
+      ui8[i] = xhr.response.charCodeAt(i);
+    }
+
+    return ui8;
   }
 });

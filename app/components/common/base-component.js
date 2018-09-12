@@ -41,7 +41,9 @@ export default Component.extend({
   },
   openModal : function (id) {
     $("#" + id).modal({
-      refresh: true
+      refresh: true,
+      backdrop: 'static',
+      keyboard: false
     });
   },
   toggleModal : function (id) {

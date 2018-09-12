@@ -14,7 +14,7 @@ module.exports = {
   env: {
     browser: true
   },
-  "globals": { "jsPDF": true, "pdfMake" : true },
+  "globals": {"pdfMake" : true, "printJS" : true },
   rules: {
     "no-console": "off",
     "no-empty": "off",

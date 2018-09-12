@@ -31,11 +31,13 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
   mainWindow = new BrowserWindow({show: false, webPreferences: {plugins: true} });
   mainWindow.maximize();
-  mainWindow.show();
   mainWindow.setMenu(null);
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show()
+  });
 
   // If you want to open up dev tools programmatically, call
-  mainWindow.openDevTools();
+  //mainWindow.openDevTools();
 
   const emberAppLocation = 'serve://dist';
 
@@ -52,6 +54,7 @@ app.on('ready', () => {
     console.log('Your Ember app (or other code) in the main window has crashed.');
     console.log('This is a serious issue that needs to be handled and/or debugged.');
   });
+
 
   mainWindow.on('unresponsive', () => {
     console.log('Your Ember app (or other code) has made the window unresponsive.');

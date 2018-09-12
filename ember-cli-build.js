@@ -39,7 +39,8 @@ module.exports = function(defaults) {
   app.import(bower + '/pdfmake/build/pdfmake.js');
   app.import(bower + '/pdfmake/build/vfs_fonts.js');
 
+  app.import('node_modules/print-js/dist/print.js');
+
   app.import('node_modules/jsbarcode/dist/JsBarcode.all.js');
-  app.import('node_modules/jspdf/dist/jspdf.min.js');
   return app.toTree();
 };
