@@ -1,0 +1,10 @@
+{{input type="checkbox" checked=state id=ckId}}
+<label for={{ckId}}>
+  {{#if url}}
+    <a href='{{url}}' target="_blank">{{label}}</a>
+  {{else}}
+      {{label}}
+  {{/if}}
+</label>
+
+{{common/message-alert changeset=changeset fieldName=fieldName}}

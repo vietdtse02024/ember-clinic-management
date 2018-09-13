@@ -1,13 +1,15 @@
 import Component from '@ember/component';
 import $ from 'jquery';
-import { inject as service } from '@ember/service';
+import Changeset from 'ember-changeset';
 
 export default Component.extend({
+  barcode : "",
   paperWitdth: 312,
   paperHeight: 71,
   init() {
     this._super(...arguments);
     $("#tab-product").addClass('active');
+    this.changeset = new Changeset(this);
   },
   actions:{
     print : function(){
