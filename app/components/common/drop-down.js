@@ -2,9 +2,11 @@ import Component from '@ember/component';
 import { scheduleOnce } from '@ember/runloop';
 import { schedule } from '@ember/runloop';
 import { A } from '@ember/array';
+import { inject as service } from '@ember/service';
+import { FunctionNames } from 'ember-clinic-management/utils/enums';
 
 export default Component.extend({
-
+  ajax: service(),
   isNumberValue: false,
 
   value: -1,
@@ -25,10 +27,15 @@ export default Component.extend({
 
   init(){
 	  this._super(...arguments);
-    //this.set('value', 2);
   },
+  change() {
 
-  //TODO: didRender?
+    // call change function
+    if(this.get('change-function')) {
+      let parent = this.get('parent');
+      parent.send(this.get('change-function'))
+    }
+  },
   didRender: function() {
     this._super(...arguments);
     schedule('afterRender', this, () => {
@@ -54,12 +61,16 @@ export default Component.extend({
     	   value = value * 1;
     	 }
     	 this.setValue(value);
-        let fieldName = this.get('fieldName');
-        this.get('changeset').set(fieldName, value);
-        this.get('changeset').validate(fieldName).then(function(r){
-        }.bind(this));
+    	 let fieldName = this.get('fieldName');
+    	 this.get('changeset').set(fieldName, value);
+    	 this.get('changeset').validate(fieldName).then(function(r){
+
+       }.bind(this));
+
+
       });
     });
+
   },
 
   willDestroyElement: function() {
@@ -69,5 +80,5 @@ export default Component.extend({
 
   setValue: function(v) {
     this.set('value', v);
-  }
+  },
 });

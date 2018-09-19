@@ -1,10 +1,16 @@
 import Service from '@ember/service';
-import UserModel from '../models/user-model';
-import SettingModel from '../models/setting-model';
+import UserModel from 'ember-clinic-management/models/user-model';
+import SettingModel from 'ember-clinic-management/models/setting-model';
+import { Enums} from 'ember-clinic-management/utils/enums';
+import EmberObject from '@ember/object';
 export default Service.extend({
   isAuthen : false,
   userModel : UserModel.create({}),
   settingModel : SettingModel.create({}),
+  init() {
+    this._super(...arguments);
+    this.set('enums', EmberObject.create(Enums));
+  },
   boot: function(name, value) {
     this.set(name, value);
   },

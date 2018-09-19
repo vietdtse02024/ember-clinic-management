@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import $ from 'jquery';
+import { isBlank } from '@ember/utils';
 
 export default Component.extend({
   invalid: null,
@@ -10,7 +11,7 @@ export default Component.extend({
   init(){
     this._super(...arguments);
     let fieldName = this.get('fieldName');
-    if(Ember.isBlank(this.get("changeset").get(fieldName))){
+    if(isBlank(this.get("changeset").get(fieldName))){
       this.set('invalid', true);
       this.set('state',false);
     }else{

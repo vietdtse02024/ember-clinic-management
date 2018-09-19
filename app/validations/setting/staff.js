@@ -5,8 +5,8 @@ import {
   validateConfirmation
 } from 'ember-changeset-validations/validators';
 
-import validateValidateDropdownRequire from 'ember-clinic-management/validators/validate-dropdown-require'
-import validateValidateTextfieldRequire from 'ember-clinic-management/validators/validate-textfield-require'
+import validateValidateDropdownRequire from 'ember-clinic-management/validators/validate-dropdown-require';
+import validateValidateTextfieldRequire from 'ember-clinic-management/validators/validate-textfield-require';
 
 export default {
   userRight: [

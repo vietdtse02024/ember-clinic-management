@@ -1,7 +1,7 @@
 import {
   validateNumber
 } from 'ember-changeset-validations/validators';
-import validateValidateTextfieldRequire from 'ember-clinic-management/validators/validate-textfield-require'
+import validateValidateTextfieldRequire from 'ember-clinic-management/validators/validate-textfield-require';
 
 export default {
   unitName: [

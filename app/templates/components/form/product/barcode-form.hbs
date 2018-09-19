@@ -2,7 +2,7 @@
   <h1 class="box-title">Tạo mã vạch sản phẩm</h1>
   <div class="main-content">
     <div style="display: none;">
-      {{common/bar-code value=barcode displayValue=false id="img1"  width=1 height=40 margin=15 marginBottom=1 marginTop=1}}
+      {{common/bar-code value=barcode displayValue=false id="barcodeImg"  width=1 height=35 margin=15 marginBottom=1 marginTop=1}}
     </div>
     <div class="box-barcode">
       <div class="row">
@@ -11,7 +11,8 @@
             <div class="row">
               <div class="col-md-4 title">Sản phẩm</div>
               <div class="col-md-8 content">
-                {{common/text-field fieldName="productCode" changeset=changeset type='text' disabled=true}}
+                {{common/selectpicker-field fieldName="productCode" type='select' tableName='Product' columnKey='ProductCode' columnValue='ProductName' parent=this
+                  fieldValue=null change-function="initProductInit" data-style='btn-common' data-live-search='true' changeset=changeset}}
               </div>
             </div>
           </div>
@@ -23,7 +24,7 @@
             <div class="row">
               <div class="col-md-4 title">Đơn vị</div>
               <div class="col-md-8 content">
-                {{common/text-field fieldName="productName" changeset=changeset type='text'}}
+                {{common/selectpicker-field fieldName="unitId" fieldValue=productUnit data-style='btn-common' data-live-search='true' content=productUnits changeset=changeset}}
               </div>
             </div>
           </div>
@@ -33,8 +34,9 @@
         <div class="col-md-6">
           <div class="form-group">
             <div class="row">
-              <div class="checkbox checkbox-primary">
-                {{common/checkboxone-field fieldName="termConditionFlg" changeset=changeset label="Bao gồm giá" ckId="termConditionFlg"}}
+              <div class="col-md-4 title">Bao gồm giá</div>
+              <div class="col-md-8 content">
+                {{common/selectpicker-field fieldName="priceChecked" fieldValue=0 name='YesOrNo' type='enum' data-style='btn-common' changeset=changeset}}
               </div>
             </div>
           </div>
