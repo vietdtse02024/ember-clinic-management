@@ -35,6 +35,12 @@ Router.map(function() {
         this.route('barcode');
       });
     });
+
+    this.route('storage', function() {
+      this.route('index', { path: '/' }, function() {
+        this.route('input-storage');
+      });
+    });
   });
 
   this.route('authen', function() {

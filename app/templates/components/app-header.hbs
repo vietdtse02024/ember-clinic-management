@@ -9,7 +9,9 @@
           <a class="nav-link" href="#">Bán Hàng</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kho Hàng</a>
+          {{#link-to "index.storage.index.input-storage" class="button nav-link" id="tab-storage"}}
+            Kho Hàng
+          {{/link-to}}
         </li>
         <li class="nav-item">
           {{#link-to "index.product.index.product" class="button nav-link" id="tab-product"}}
