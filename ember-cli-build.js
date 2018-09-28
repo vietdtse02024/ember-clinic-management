@@ -14,6 +14,19 @@ module.exports = function(defaults) {
   });
   app.import(bower + '/simple-line-icons/css/simple-line-icons.css');
   app.import(bower + '/bootstrap-select/dist/css/bootstrap-select.css');
+  app.import(bower + '/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css');
+
+  app.import(bower + '/font-awesome/css/font-awesome.css');
+  app.import(bower + '/font-awesome/css/font-awesome.css.map', {
+    destDir : 'assets'
+  });
+  var fa_font = bower + '/font-awesome/fonts/fontawesome-webfont.';
+  var fa_font_exts = [ 'ttf', 'woff', 'woff2' ];
+  fa_font_exts.forEach(function(ext) {
+    app.import(fa_font + ext, {
+      destDir : 'fonts'
+    });
+  });
 
   var icon_font = bower + '/simple-line-icons/fonts/Simple-Line-Icons.';
   var icon_font_exts = [ 'ttf', 'woff', 'woff2', 'svg' ];
@@ -35,7 +48,7 @@ module.exports = function(defaults) {
 
   app.import(bower + '/bootstrap/dist/js/bootstrap.js');
   app.import(bower + '/bootstrap-select/dist/js/bootstrap-select.js');
-
+  app.import(bower + '/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js');
   app.import(bower + '/pdfmake/build/pdfmake.js');
   app.import(bower + '/pdfmake/build/vfs_fonts.js');
 

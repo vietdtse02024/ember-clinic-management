@@ -522,3 +522,12 @@ body a {
 .table-responsive {
   border: 1px solid #beb7b7;
 }
+
+.data-empty {
+  text-align: center;
+  color: #ff4515;
+}
+
+.table {
+  margin-bottom: 0px !important;
+}

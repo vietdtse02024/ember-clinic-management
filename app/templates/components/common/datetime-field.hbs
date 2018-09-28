@@ -1,0 +1,3 @@
+{{input value=(get changeset fieldName)  class=(concat "form-control date-picker" )
+        maxlength=maxlength focus-out=(action "validate") placeholder=placeholder}}
+{{common/message-alert changeset=changeset fieldName=fieldName}}

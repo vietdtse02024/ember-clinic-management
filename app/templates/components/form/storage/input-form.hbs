@@ -18,8 +18,7 @@
           <div class="row">
             <div class="col-md-4 title">Từ ngày</div>
             <div class="col-md-8 content">
-              {{common/selectpicker-field fieldName="productIdSearch2" type='select' tableName='Product' columnKey='ID' columnValue='ProductName'
-                                          data-style='btn-common' data-live-search='true' changeset=changeset}}
+              {{common/datetime-field fieldName="fromDate" changeset=changeset}}
             </div>
           </div>
         </div>
@@ -29,8 +28,7 @@
           <div class="row">
             <div class="col-md-4 title">Đến ngày</div>
             <div class="col-md-8 content">
-              {{common/selectpicker-field fieldName="productIdSearch3" type='select' tableName='Product' columnKey='ID' columnValue='ProductName'
-                                          data-style='btn-common' data-live-search='true' changeset=changeset}}
+              {{common/datetime-field fieldName="toDate" changeset=changeset}}
             </div>
           </div>
         </div>
@@ -78,7 +76,13 @@
                   <td>
                     <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editCountry" item}}><span class="glyphicon glyphicon-pencil"></span></button>
                   </td>
+
                 </tr>
+              {{else}}
+                <tr>
+                  <td colspan="12" class="data-empty">Không tìm thấy dữ liệu</td>
+                </tr>
+
               {{/each}}
               </tbody>
             </table>

@@ -1,4 +1,5 @@
-export default Ember.Component.extend({
+import Component from '@ember/component';
+export default Component.extend({
 
   parent: null,
   eventName: null,
@@ -11,7 +12,6 @@ export default Ember.Component.extend({
     // sub
     var parent = this.get('parent');
     var eventName = this.get('eventName');
-    //TODO: 多个eventName
     if (parent && eventName) {
       parent.on(eventName, this, 'showTooltip');
       parent.on('removeTooltip', this, 'removeTooltip');

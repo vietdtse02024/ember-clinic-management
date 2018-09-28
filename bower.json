@@ -20,6 +20,8 @@
     "bootstrap-select": "^1.13.1",
     "simple-line-icons": "^2.4.1",
     "glyphicons": "^0.0.2",
-    "pdfmake": "^0.1.38"
+    "pdfmake": "^0.1.38",
+    "font-awesome": "4.7.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
   }
 }
