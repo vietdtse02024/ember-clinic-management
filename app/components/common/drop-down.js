@@ -41,6 +41,7 @@ export default Component.extend({
     schedule('afterRender', this, () => {
       this.$().selectpicker('val', this.get('value'));
       this.$().selectpicker('refresh');
+      this.change();
     });
   },
 

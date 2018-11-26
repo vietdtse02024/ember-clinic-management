@@ -36,7 +36,7 @@
     </div>
     <div class="box-button">
       <button class="btn btn-primary" {{action "search"}}><i class="glyphicon glyphicon-search"></i> Tìm kiếm</button>
-      <button class="btn btn-success" {{action "addCustomer"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
+      <button class="btn btn-success" {{action "editBill"}}><i class="glyphicon glyphicon-plus"></i> Thêm mới</button>
     </div>
     <form id="storage-input-form">
 
@@ -74,7 +74,7 @@
                   <td>{{item.FULL_NAME}}</td>
                   <td>{{item.Note}}</td>
                   <td>
-                    <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editCountry" item}}><span class="glyphicon glyphicon-pencil"></span></button>
+                    <button type="button" class="btn btn-primary btn-sm" data-title="Edit" {{action "editBill" item}}><span class="glyphicon glyphicon-pencil"></span></button>
                   </td>
 
                 </tr>
@@ -94,22 +94,139 @@
   </div>
 </div>
 
-
-
-<div class="modal fade" id="view-pdf" tabindex="-1" role="dialog" aria-labelledby="view-pdf" aria-hidden="true">
-  <div class="modal-dialog  modal-lager">
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+  <div class="modal-dialog modal-lager">
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title custom_align" id="Heading">Barcode</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-      </div>
-      <div class="modal-body">
-        <iframe src="{{pdfData}}" type="application/pdf" width="100%" height="500"></iframe>
-      </div>
+      <form id="edit-staff-form">
+        <div class="modal-header">
 
-      <div class="modal-footer ">
-        <button type="button" class="btn btn-success btn-lg" {{action "print"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> In mã vạch</button>
-      </div>
+          <h4 class="modal-title custom_align" id="Heading">Phiếu nhập kho</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="box-role">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Mã phiếu</div>
+                      <div class="col-md-8 content">
+                        {{common/text-field fieldName="billCode" changeset=changeset type='text' disabled=true}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Nguồn nhập</div>
+                      <div class="col-md-8 content">
+                        {{common/selectpicker-field fieldName="supplier" fieldValue=supplier type='select' tableName='Supplier' columnKey='ID' columnValue='SupplierName'
+                                                    data-style='btn-common' data-live-search='true' changeset=changeset}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Ghi chú</div>
+                      <div class="col-md-8 content">
+                        {{common/text-field fieldName="note" changeset=changeset type='text'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Ngày nhập</div>
+                      <div class="col-md-8 content">
+                        {{common/datetime-field fieldName="inputDate" changeset=changeset}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-role">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Sản phẩm</div>
+                      <div class="col-md-8 content">
+                        {{common/selectpicker-field fieldName="productId" fieldValue=supplier type='select' tableName='Product' columnKey='ID' columnValue='ProductName'
+                                                    change-function="initProductInit" data-style='btn-common' data-live-search='true' changeset=changeset parent=this}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Số lượng</div>
+                      <div class="col-md-8 content">
+                        {{common/text-field fieldName="quantity" changeset=changeset type='text'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Hạn sử dụng</div>
+                      <div class="col-md-8 content">
+                        {{common/datetime-field fieldName="expDate" changeset=changeset}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Đơn vị</div>
+                      <div class="col-md-8 content">
+                        {{common/selectpicker-field fieldName="unitId" fieldValue=productUnit data-style='btn-common' data-live-search='true' content=productUnits changeset=changeset}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Giá nhập</div>
+                      <div class="col-md-8 content">
+                        {{common/text-field fieldName="inputPrice" changeset=changeset type='text'}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-4 title">Thành tiền</div>
+                      <div class="col-md-8 content">
+                        {{common/text-field fieldName="total" changeset=changeset type='text' disabled=true}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-success btn-lg" {{action "saveEditProduct"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
+        </div>
+      </form>
     </div>
     <!-- /.modal-content -->
   </div>

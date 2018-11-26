@@ -4,6 +4,7 @@ import pagedArray from 'ember-cli-pagination/computed/paged-array';
 import { computed } from '@ember/object'
 import $ from 'jquery';
 import numeral from 'numeral';
+import { FunctionNames } from 'ember-clinic-management/utils/enums';
 
 export default Component.extend({
   ajax: service(),
@@ -34,7 +35,8 @@ export default Component.extend({
     },
     formatRate : function(e) {
       e.value = numeral(e.value).format('#,#.0');
-    }
+    },
+
   },
   convertStringToNumber : function(s){
     return Number(s.replace(/[^\d.]/g, ''))
