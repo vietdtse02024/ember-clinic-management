@@ -13,7 +13,7 @@ export default Component.extend({
   },
   success(userData) {
     let bootstrap = this.get('bootstrap');
-    localStorage.setItem('isAuthen', false);
+    localStorage.setItem('isAuthen', true);
     bootstrap.pushUserModel(userData);
     this.get('router').transitionTo('index.welcome');
   },
@@ -43,6 +43,6 @@ export default Component.extend({
       });
 
     }
-
   }
+
 });

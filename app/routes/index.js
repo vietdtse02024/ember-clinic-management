@@ -9,16 +9,18 @@ export default Route.extend({
     this.getUserSetting();
   },
   model() {
-    let bootstrap = this.get('bootstrap');
-    let activeUser = bootstrap.getActiveUser();
-    return {
-      fullName : activeUser.FULL_NAME
+    if (localStorage.isAuthen =='true') {
+      let bootstrap = this.get('bootstrap');
+      let activeUser = bootstrap.getActiveUser();
+      return {
+        fullName : activeUser.FULL_NAME
+      }
     }
   },
   afterModel(model) {
     this._super(...arguments);
     let bootstrap = this.get('bootstrap');
-    if (!localStorage.isAuthen) {
+    if (localStorage.isAuthen == 'false') {
       this.replaceWith('authen.login');
     }
 

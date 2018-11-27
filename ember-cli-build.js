@@ -51,9 +51,9 @@ module.exports = function(defaults) {
   app.import(bower + '/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js');
   app.import(bower + '/pdfmake/build/pdfmake.js');
   app.import(bower + '/pdfmake/build/vfs_fonts.js');
-
   app.import('node_modules/print-js/dist/print.js');
-
   app.import('node_modules/jsbarcode/dist/JsBarcode.all.js');
+
+  app.import('vendor/jquery.scannerdetection.js');
   return app.toTree();
 };

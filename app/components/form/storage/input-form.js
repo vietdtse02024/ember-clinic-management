@@ -5,6 +5,7 @@ import { FunctionNames } from 'ember-clinic-management/utils/enums';
 import { inject as service } from '@ember/service';
 import numeral from 'numeral';
 import moment from 'moment';
+import { scheduleOnce } from '@ember/runloop';
 
 export default BaseCompenent.extend({
   ajax: service(),
@@ -20,6 +21,21 @@ export default BaseCompenent.extend({
       toDate : moment().format('DD/MM/YYYY')
     });
     this.send('search');
+
+  },
+  didRender() {
+    $(document).scannerDetection({
+      timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+      avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
+      preventDefault: true,
+      endChar: [13],
+      onComplete: function(barcode, qty){
+        console.log(barcode);
+      },
+      onError: function(string, qty) {
+        console.log("error: " + string);
+      }
+    });
 
   },
   actions:{
@@ -75,7 +91,7 @@ export default BaseCompenent.extend({
           }
         });
       }
-    }
+    },
   }
 
 });
