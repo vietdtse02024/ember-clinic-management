@@ -4,8 +4,7 @@ import SettingModel from 'ember-clinic-management/models/setting-model';
 import { Enums} from 'ember-clinic-management/utils/enums';
 import EmberObject from '@ember/object';
 export default Service.extend({
-  isAuthen : false,
-  userModel : UserModel.create({}),
+  userModel : null,
   settingModel : SettingModel.create({}),
   init() {
     this._super(...arguments);
@@ -13,6 +12,7 @@ export default Service.extend({
   },
   boot: function(name, value) {
     this.set(name, value);
+    localStorage.setItem(name, JSON.stringify(value));
   },
   pushUserModel: function(data) {
     this.set('userModel', UserModel.create({
@@ -22,6 +22,7 @@ export default Service.extend({
       FULL_NAME: data.FULL_NAME,
       RIGHT_ID: data.RIGHT_ID
     }));
+    localStorage.setItem('userModel', JSON.stringify(this.get('userModel')));
   },
   pushSettingModel: function(data) {
     this.set('settingModel', SettingModel.create({
@@ -51,5 +52,20 @@ export default Service.extend({
       STORE_ADDRESS:  data.STORE_ADDRESS,
       PHONE:  data.PHONE
     }));
+  },
+  getActiveUser(){
+    var user = this.get('userModel');
+    if (user) {
+      return user;
+    } else {
+      // try to get the user from localStorage
+      var foundUser = JSON.parse(localStorage.userModel);
+      if (foundUser) {
+        this.set('userModel', foundUser);
+        return foundUser;
+      } else {
+        return null;
+      }
+    }
   }
 });

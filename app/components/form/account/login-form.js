@@ -13,13 +13,13 @@ export default Component.extend({
   },
   success(userData) {
     let bootstrap = this.get('bootstrap');
-    bootstrap.boot("isAuthen", true);
+    localStorage.setItem('isAuthen', false);
     bootstrap.pushUserModel(userData);
     this.get('router').transitionTo('index.welcome');
   },
   failure() {
     let bootstrap = this.get('bootstrap');
-    bootstrap.boot("isAuthen", false);
+    localStorage.setItem('isAuthen', false);
     this.set("loginFailed", true);
   },
   actions:{
