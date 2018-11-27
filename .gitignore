@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/.idead/*
 
 # dependencies
 /node_modules
