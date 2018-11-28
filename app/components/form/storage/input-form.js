@@ -5,7 +5,7 @@ import { FunctionNames } from 'ember-clinic-management/utils/enums';
 import { inject as service } from '@ember/service';
 import numeral from 'numeral';
 import moment from 'moment';
-import { scheduleOnce } from '@ember/runloop';
+import { A } from '@ember/array';
 
 export default BaseCompenent.extend({
   ajax: service(),
@@ -13,6 +13,7 @@ export default BaseCompenent.extend({
   paperWitdth: 312,
   paperHeight: 71,
   productUnits : null,
+  billItems : A(),
   init() {
     this._super(...arguments);
     this.changeset = new Changeset(this);
@@ -74,7 +75,7 @@ export default BaseCompenent.extend({
 
         });
       }
-      this.openModal('edit');
+      this.openModal('inputStorageModal');
     },
 
     initProductInit : function () {
@@ -92,6 +93,19 @@ export default BaseCompenent.extend({
         });
       }
     },
+    addBillItem : function() {
+      this.get('billItems').pushObject({
+        productName : 'test',
+        productUnit : 'test2',
+        productPrice : 'test2',
+        quantity : 'test2',
+        totalPrice : 'test2',
+        expDate : 'test2',
+        note : 'test2',
+        productId : 'test2',
+        productUnitId : 'test2',
+      });
+    }
   }
 
 });

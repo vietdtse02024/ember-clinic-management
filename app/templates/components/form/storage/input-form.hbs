@@ -94,7 +94,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+<div class="modal fade" id="inputStorageModal" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
   <div class="modal-dialog modal-lager">
     <div class="modal-content">
       <form id="edit-staff-form">
@@ -221,8 +221,52 @@
                 </div>
               </div>
             </div>
+            <div class="box-button col-md-12" style="text-align: center;">
+              <button class="btn btn-primary" {{action "addBillItem"}}><i class="glyphicon glyphicon-plus"></i> Thêm</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-add">
+              <div class="table-responsive" style="height: auto;">
+                <table class="table table-bordred table-striped">
+                  <thead>
+                  <th>STT</th>
+                  <th>Sản phẩm</th>
+                  <th>Đơn vị</th>
+                  <th>Đơn giá</th>
+                  <th>Số lượng</th>
+                  <th>Thành tiền</th>
+                  <th>Hạn sử dụng</th>
+                  <th>Ghi chú</th>
+                  <th>Xóa</th>
+                  </thead>
+                  <tbody>
+                  {{#each billItems as | item index |}}
+                    <tr>
+                      <td>{{inc index}}</td>
+                      <td>{{item.productName}}</td>
+                      <td>{{item.productUnit}}</td>
+                      <td>{{item.productPrice}}</td>
+                      <td>{{item.quantity}}</td>
+                      <td>{{item.totalPrice}}</td>
+                      <td>{{item.expDate}}</td>
+                      <td>{{item.note}}</td>
+                      <td>
+                        <button type="button" class="btn btn-danger btn-sm" data-title="Delete" {{action "deleteBillItem" index}}><span class="glyphicon glyphicon-trash"></span></button>
+                      </td>
+                    </tr>
+                    {{else}}
+                    <tr>
+                      <td colspan="9" class="data-empty">Chưa thêm sản phẩm nào</td>
+                    </tr>
+                  {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="modal-footer ">
           <button type="button" class="btn btn-success btn-lg" {{action "saveEditProduct"}} style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Lưu</button>
         </div>
